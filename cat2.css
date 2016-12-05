@@ -1,0 +1,129 @@
+
+body {
+    background-color: black;
+    background-image: url("caterp.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Segoe, sans-serif;
+    color:#888;
+    font-size: 12px;
+    max-width: 800px;
+    margin: auto;
+    }
+
+h1 {
+    color: #ccf;
+    font-family: Georgia, serif;
+    text-align: left;
+    font-size: 36px
+}
+
+sub {    
+    font-size: 12px;
+    color: #88A ; 
+}
+
+p, h2, h3, h4, h5, h6, it, ob {
+    text-shadow: 0 0 5px #000;
+    color: #fff
+}
+
+it {
+    font-style:  italic;
+    color:#818181;
+    }
+
+ob {
+    font-style:  oblique;
+    /* This is
+    a multi-line
+    comment */
+    }
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px; 
+    margin: 1px;
+    text-decoration: none;
+    display: inline-block;
+    font-style: inherit;
+}
+
+a:hover, a:active {
+    background-color: red;
+    font-style: inherit;
+}
+
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+li:hover {
+    background-color:  #222;
+}
+
+ol.c {
+    list-style-type: upper-roman;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+}        
+.center {
+    text-align: center;
+    }
+
+.smcaps {
+    font-weight: 100;
+    font-size: large;
+    text-transform: capitalize;
+    font-variant:  small-caps;
+}
+
+.one {
+    border-left: 6px solid red;
+    background-color: #111;
+    padding: 3px 6px;
+    text-decoration: overline;
+}
+
+.fea {
+    background-color: #002;
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    border: 1px solid white;
+}   
+ 
+.mid{
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+.diva {
+    max-width: 500px;
+    min-width:  100px;
+    margin: auto;
+    background-color: #001;
+    text-align: center;
+    padding:  20px;
+    border: 10px solid red;
+    border-radius: 50px;
+}   
+        
+.divb {
+    max-width: 500px;
+    min-width:  100px;
+    margin: 20px;
+    padding:  20px;
+    background-color: #000022;
+    text-align: center;
+}   
+
