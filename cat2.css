@@ -50,6 +50,16 @@ a.i:hover, a.i:active {
     color: red;
 }
 
+a.ii:link, a.ii:visited {
+    text-decoration: none;
+    color: rgb(161, 255, 155);
+}
+
+a.ii:hover, a.ii:active {
+    color:  rgb(11, 178, 0);
+}
+
+
 a.b:link, a.b:visited {
     background-color: #f44336;
     color: white;
@@ -61,10 +71,24 @@ a.b:link, a.b:visited {
 }
 
 a.b:hover, a.b:active {
-    background-color: red;
+    background-color: rgba(3, 45, 0, 1);
     font-style: inherit;
 }
 
+a.bi:link, a.bi:visited {
+    background-color: rgba(3, 45, 0, 0.70) ;
+    color: white;
+    padding: 10px 25px; 
+    margin: 1px;
+    text-decoration: none;
+    display: inline-block;
+    font-style: inherit;
+}
+
+a.bi:hover, a.bi:active {
+    background-color: red;
+    font-style: inherit;
+}
 
 
 ul.a {
