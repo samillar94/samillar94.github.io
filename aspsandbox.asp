@@ -14,7 +14,7 @@
     <br><br>
     <p class="diva">I define the content with HTML and the layout with CSS.</p>
     <br>
-    <p><a href="mothindex.asp">Go to moth index</a><a href="index.html">Go home</a></p>
+    <p><a href="mothindex.html">Go to moth index</a><a href="index.html">Go home</a></p>
     <div class="fea">
     <p class="smcaps">Beautiful butterflies<br>marvellous moths<br>precious pollinators</p><br><em>BCNI</em>
     </div>
