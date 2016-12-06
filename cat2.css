@@ -72,7 +72,7 @@ a.b:link, a.b:visited {
 
 a.b:hover, a.b:active {
     background-color: rgba(3, 45, 0, 1);
-    font-style: inherit;
+    font-style: inherit
 }
 
 a.bi:link, a.bi:visited {
