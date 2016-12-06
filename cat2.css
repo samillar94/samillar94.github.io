@@ -61,7 +61,7 @@ a.ii:hover, a.ii:active {
 
 
 a.b:link, a.b:visited {
-    background-color: #f44336;
+    background-color:  rgba(255, 0, 0, 0.5);
     color: white;
     padding: 10px 25px; 
     margin: 1px;
@@ -71,12 +71,12 @@ a.b:link, a.b:visited {
 }
 
 a.b:hover, a.b:active {
-    background-color: rgba(3, 45, 0, 1);
+    background-color: red;
     font-style: inherit
 }
 
 a.bi:link, a.bi:visited {
-    background-color: rgba(3, 45, 0, 0.70) ;
+    background-color: rgba(3, 45, 0, 0.50) ;
     color: white;
     padding: 10px 25px; 
     margin: 1px;
@@ -86,7 +86,7 @@ a.bi:link, a.bi:visited {
 }
 
 a.bi:hover, a.bi:active {
-    background-color: red;
+    background-color: rgba(3, 45, 0, 1);
     font-style: inherit;
 }
 
