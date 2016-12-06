@@ -41,7 +41,15 @@ ob {
     comment */
     }
 
-a:link, a:visited {
+a.i:link, a.i:visited {
+    text-decoration: none;
+}
+
+a.i:hover, a.i:active {
+    color: red;
+}
+
+a.b:link, a.b:visited {
     background-color: #f44336;
     color: white;
     padding: 14px 25px; 
@@ -51,10 +59,12 @@ a:link, a:visited {
     font-style: inherit;
 }
 
-a:hover, a:active {
+a.b:hover, a.b:active {
     background-color: red;
     font-style: inherit;
 }
+
+
 
 ul.a {
     list-style-type: circle;
