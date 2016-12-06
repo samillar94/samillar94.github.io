@@ -91,7 +91,12 @@ a.bi:hover, a.bi:active {
     font-style: inherit;
 }
 
-
+.yt{
+    background-image: url(YouTube_light_color_icon.png);
+    background-position: 10px 10px;    
+    padding-left: 44px;
+    color: #fff;
+}
 ul.a {
     list-style-type: circle;
 }
