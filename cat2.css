@@ -43,6 +43,7 @@ ob {
 
 a.i:link, a.i:visited {
     text-decoration: none;
+    color: #ffb3ad;
 }
 
 a.i:hover, a.i:active {
