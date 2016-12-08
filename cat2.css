@@ -7,61 +7,83 @@ body {
     background-attachment: fixed;
     font-family: 'Segoe UI', Segoe, sans-serif;
     color:#888;
-    font-size: 14px;
+    font-size: medium;
     max-width: 800px;
     margin: auto;
-    }
+    text-align: center;   
+}
 
 h1 {
     color: #bcd6ff;
     margin-top: 150px;
+    margin-bottom: 5px;
     font-family: Georgia, serif;
-    text-align: left;
-    font-size: 36px
+    font-size: 36px;
 }
 
 sub {    
-    font-size: 14px;
-    color: #88A ; 
+    color: #bcd6ff;
+    text-shadow: 0 0 5px #000;
+    max-width: 200px;
+    margin-top: 20px;
+    line-height: 0.5;
 }
 
-p, h2, h3, h4, h5, h6, it, ob {
+p, h2, h3, h4, h5, h6 {
     text-shadow: 0 0 5px #000;
     color: #fff
 }
 
-it {
+.ita {
     font-style:  italic;
-    color:#818181;
     }
 
-ob {
+.obl {
     font-style:  oblique;
     /* This is
     a multi-line
     comment */
     }
 
-a.i:link, a.i:visited {
+.orig {
+    font-family: 'Segoe UI', Segoe, sans-serif;
+    color:#888;
+    font-size: medium;    
+}
+
+.smcaps {
+    font-weight: 100;
+    font-size: large;
+    text-transform: capitalize;
+    font-variant:  small-caps;
+}
+
+.headinglinks{
+    max-width: 700px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+a.inline-external:link, a.inline-external:visited {
     text-decoration: none;
     color: #ffb3ad;
 }
 
-a.i:hover, a.i:active {
+a.inline-external:hover, a.inline-external:active {
     color: red;
 }
 
-a.ii:link, a.ii:visited {
+a.inline-internal:link, a.inline-internal:visited {
     text-decoration: none;
-    color: rgb(161, 255, 155);
+    color: rgb(167, 255, 160);
 }
 
-a.ii:hover, a.ii:active {
-    color:  rgb(11, 178, 0);
+a.inline-internal:hover, a.inline-internal:active {
+    color:  rgb(0, 170, 0);
 }
 
 
-a.b:link, a.b:visited {
+a.block-external:link, a.block-external:visited {
     background-color:  rgba(255, 0, 0, 0.5);
     color: white;
     padding: 10px 25px; 
@@ -71,13 +93,13 @@ a.b:link, a.b:visited {
     font-style: inherit;
 }
 
-a.b:hover, a.b:active {
+a.block-external:hover, a.block-external:active {
     background-color: red;
     font-style: inherit
 }
 
-a.bi:link, a.bi:visited {
-    background-color: rgba(3, 45, 0, 0.50) ;
+a.block-internal:link, a.block-internal:visited {
+    background-color: rgba(0, 126, 0, 0.50) ;
     color: white;
     padding: 10px 25px; 
     margin: 1px;
@@ -86,22 +108,30 @@ a.bi:link, a.bi:visited {
     font-style: inherit;
 }
 
-a.bi:hover, a.bi:active {
-    background-color: rgba(3, 45, 0, 1);
+a.block-internal:hover, a.block-internal:active {
+    background-color: rgba(0, 126, 0, 1);
     font-style: inherit;
 }
 
-.yt{
+.youtube{
     background-image: url(YouTube_light_color_icon.png);
     background-position: 10px 10px;    
     padding-left: 44px;
     color: #fff;
 }
-ul.a {
+
+.gravatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    text-shadow: inherit inherit 5px #000; 
+}
+
+ul.circle {
     list-style-type: circle;
 }
 
-ul.b {
+ul.square {
     list-style-type: square;
 }
 
@@ -116,25 +146,20 @@ ol.c {
 ol.d {
     list-style-type: lower-alpha;
 }        
+
 .center {
     text-align: center;
     }
-
-.smcaps {
-    font-weight: 100;
-    font-size: large;
-    text-transform: capitalize;
-    font-variant:  small-caps;
-}
 
 .one {
     border-left: 6px solid red;
     background-color: #111;
     padding: 3px 6px;
     text-decoration: overline;
+    text-align: left;
 }
 
-.fea {
+.feature1 {
     background-color: #002;
     text-align: center;
     padding: 20px;
@@ -143,12 +168,7 @@ ol.d {
     border: 1px solid white;
 }   
  
-.mid{
-    padding: 20px;
-    max-width: 400px;
-    margin: auto;
-}
-.diva {
+.feature2 {
     max-width: 500px;
     min-width:  100px;
     margin: auto;
@@ -159,7 +179,7 @@ ol.d {
     border-radius: 50px;
 }   
         
-.divb {
+.feature3 {
     max-width: 500px;
     min-width:  100px;
     margin: 20px;
