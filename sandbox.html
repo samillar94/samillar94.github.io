@@ -4,8 +4,50 @@
     <meta charset="utf-8" />
     <title>Sandbox | The Flying Chrysalis</title>
     <link rel="stylesheet" type="text/css" href="cat2.css">
-    <style>
-    h6 {color: #ff6a00} /*Overwrites stylesheet*/  
+    <style>/*Overwrites stylesheet*/
+        h6 {
+            color: #ff6a00
+        } 
+        div.relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            background-color: #f00;
+            margin: auto;
+        } 
+        div.absolute {
+            position: absolute;
+            background-color: #d00;
+            top: 10px;
+            left: 10px;
+            width: 200px;
+            height: 100px;
+        }
+        div.absolute2 {
+            position: absolute;
+            background-color: #b00;
+            top: 30px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+        }  
+        div.yscroll {
+            background-color: #eee;
+            width: 400px;
+            height: 100px;
+            border: 1px dotted black;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            padding: 10px;
+            margin: auto;
+            text-align: justify;
+            text-align-last: left;
+            position: relative;
+        }
+        img.floatright {
+            float: right;
+            margin: 0 0 0 10px;
+        }
     </style>
 </head>
   
@@ -18,7 +60,9 @@
     <div class="feature1">
     <p class="smcaps">Beautiful butterflies<br>marvellous moths<br>precious pollinators</p><br><em>BCNI</em>
     </div>
-    <br><br>
+    <br>
+    <div class="yscroll"><img src="rutigblog.jpg" alt="a" class="floatright gravatar">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis ante sollicitudin tempus blandit. Donec rhoncus feugiat sem eget finibus. Quisque interdum est eget dictum tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus feugiat elit et augue consectetur, sed tempor risus dictum. Aliquam erat volutpat. Sed ornare dui a diam sagittis, vestibulum suscipit eros consequat. Mauris dignissim magna vitae sem congue dignissim. Nunc a facilisis elit, eget eleifend sem. Sed semper congue malesuada. Aenean tincidunt enim nisl, sed sagittis lectus consectetur id. Maecenas est erat, sodales sed aliquam in, varius a ipsum.</div>
+    <br>
      I've set the body style to produce grey text if no selector is applied.
     <p class="one">Hello World!</p> 
     <div class="wasp-waist">
@@ -31,10 +75,8 @@
 
     <br>
     <p class="one">Default em and defined italic and oblique selectors</p>
-    <br>
-    
     <p>< p ><em class="orig">Geronimo! (em.orig) </em><em class="ita">Geronimo! (em.ita) </em><em class="obl">Geronimo! (em.obl) </em><i class="orig">Geronimo! (i.orig)</i>< / p></p><br>
-    <br>
+    <div class="relative"><div class="absolute"><div class="absolute2"></div></div></div>
     <p><a class="inline-internal"  href="mothindex.html"><i style="font-variant: small-caps">Phyllocnistis unipunctella</i> and friends... soon...</a> and well done for rummaging! <a class="inline-external"  href="https://github.com/samillar94/samillar94.github.io" target="_blank">Here's a backstage pass! :)</a></p>
     <br><br>
 </body>
