@@ -48,6 +48,13 @@
             float: right;
             margin: 0 0 0 10px;
         }
+        iframe{
+            height:  400px;
+            width: 600px;
+            border: none;
+            box-shadow: 0 0 10px white;
+        }
+
     </style>
 </head>
   
@@ -56,7 +63,8 @@
     <br><br>
     <p class="feature2">I define the content with HTML and the layout with CSS.</p>
     <br>
-    <p><a class="block-internal" href="mothindex.html">Go to moth index</a><a class="block-internal" href="index.html">Go home</a></p>
+    <p>In the iframe below, <a class="inline-internal" href="sandbox.html" target="iframe_a">reproduce this page</a> or go to the <a class="inline-internal" href="mothindex.html" target="iframe_a">moth index</a>, a <a class="inline-external" href="https://en.wikipedia.org/wiki/Special:Random" target="iframe_a">random Wikipedia page</a> or <a class="inline-internal" href="index.html" target="iframe_a">home</a>.</p>
+    <p><iframe src="blank.html" name="iframe_a"></iframe></p>
     <div class="feature1">
     <p class="smcaps">Beautiful butterflies<br>marvellous moths<br>precious pollinators</p><br><em>BCNI</em>
     </div>
@@ -64,20 +72,22 @@
     <div class="yscroll"><img src="rutigblog.jpg" alt="a" class="floatright gravatar">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis ante sollicitudin tempus blandit. Donec rhoncus feugiat sem eget finibus. Quisque interdum est eget dictum tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus feugiat elit et augue consectetur, sed tempor risus dictum. Aliquam erat volutpat. Sed ornare dui a diam sagittis, vestibulum suscipit eros consequat. Mauris dignissim magna vitae sem congue dignissim. Nunc a facilisis elit, eget eleifend sem. Sed semper congue malesuada. Aenean tincidunt enim nisl, sed sagittis lectus consectetur id. Maecenas est erat, sodales sed aliquam in, varius a ipsum.</div>
     <br>
      I've set the body style to produce grey text if no selector is applied.
+    <br><br>
     <p class="one">Hello World!</p> 
     <div class="wasp-waist">
     <h2>You can use HTML tags</h2><h3> to</h3><h4> format</h4><h5> the</h5><h6> text.</h6>
     <p>Those were h2-h6 - there's no h7 unless you define it.</p>
 
     <p style='color:#0070C0'>Use < br > to take a new line. Incidentally, I've set the colour here to blue using an inline thingy.</p>
+    <p><i style="font-variant: small-caps">Phyllocnistis unipunctella</i></p>
     </div>
-    <br>
-
     <br>
     <p class="one">Default em and defined italic and oblique selectors</p>
     <p>< p ><em class="orig">Geronimo! (em.orig) </em><em class="ita">Geronimo! (em.ita) </em><em class="obl">Geronimo! (em.obl) </em><i class="orig">Geronimo! (i.orig)</i>< / p></p><br>
     <div class="relative"><div class="absolute"><div class="absolute2"></div></div></div>
-    <p><a class="inline-internal"  href="mothindex.html"><i style="font-variant: small-caps">Phyllocnistis unipunctella</i> and friends... soon...</a> and well done for rummaging! <a class="inline-external"  href="https://github.com/samillar94/samillar94.github.io" target="_blank">Here's a backstage pass! :)</a></p>
+    <p>Well done for rummaging! <a class="inline-external"  href="https://github.com/samillar94/samillar94.github.io" target="_blank">Here's a backstage pass! :)</a></p>
+    <p><a class="block-internal" href="index.html">Home</a><a class="block-internal" href="mothindex.html">Moth index</a></p>
+    <p class="center" style="color:#888">Powered by <a class="inline-external" href="https://pages.github.com/" target="_blank">GitHub Pages</a></p> 
     <br><br>
 </body>
 </html>
