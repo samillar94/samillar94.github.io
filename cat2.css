@@ -21,17 +21,16 @@ h1 {
     font-size: 36px;
 }
 
-sub {    
-    color: #bcd6ff;
-    text-shadow: 0 0 5px #000;
-    max-width: 200px;
-    margin-top: 20px;
-    line-height: 0.5;
-}
+
 
 p, h2, h3, h4, h5, h6 {
     text-shadow: 0 0 5px #000;
     color: #fff
+}
+
+p.sub {    
+    color: #bcd6ff;
+    text-shadow: 0 0 10px #000;
 }
 
 .ita {
@@ -53,8 +52,6 @@ p, h2, h3, h4, h5, h6 {
 
 .smcaps {
     font-weight: 100;
-    font-size: large;
-    text-transform: capitalize;
     font-variant:  small-caps;
 }
 

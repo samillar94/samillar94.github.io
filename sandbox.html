@@ -54,17 +54,109 @@
             border: none;
             box-shadow: 0 0 10px white;
         }
+        div.menu1 {
+            display: inline-block;
+            position: relative;
+            text-align: left;
+            min-width: 50px;
+            color: white;
+            padding: 10px 25px; 
+            background-color: #f00;
+            margin: auto;
+            margin-bottom: 10px;
+        } 
+        div.drop1{
+            display: none;
+            position: absolute;
+            bottom: -41px;
+            left: 0;
+            min-width: 50px;
+            background-color:  #d00;
+            color: white;
+            text-align: left;
+            padding: 10px 25px; 
+            z-index: 1
+        }
+        div.menu1:hover div.drop1, div.drop1:hover{
+            display: block;
+        }
 
+        .dropbtn {
+            font: "Segoe UI", Segoe, sans;
+            background-color: rgba(255,0,0,0.5);
+            color: white;
+            padding: 10px 25px; 
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 25px; 
+            background-color: rgba(256,0,0,0.5);
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f00}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #f00;
+        }
     </style>
 </head>
   
 <body>
-    <h1>Good heavens! This box has SAND in it!!</h1>
-    <br><br>
-    <p class="feature2">I define the content with HTML and the layout with CSS.</p>
+    <div>
+    <h1><i>Sand</i> in the generator. Is it any wonder I never get anything done?</h1>
+    <p class="sub">Fix it, Reginald!!</p>
+    <div class="menu1">
+        <span>Dropdown v1</span>
+        <a href=""><div class="drop1">
+            <span>Link</span>
+        </div></a>
+    </div>
+    <div class="dropdown">
+      <div class="dropbtn">Dropdown v2</div>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <div class="dropbtn">Dropdown v2 last</div>
+      <div class="dropdown-content" style="right: 0">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+    <p class="feature2">I define the content with HTML, the layout with CSS, and the behaviour with JavaScript.</p>
     <br>
     <p>In the iframe below, <a class="inline-internal" href="sandbox.html" target="iframe_a">reproduce this page</a> or go to the <a class="inline-internal" href="mothindex.html" target="iframe_a">moth index</a>, a <a class="inline-external" href="https://en.wikipedia.org/wiki/Special:Random" target="iframe_a">random Wikipedia page</a> or <a class="inline-internal" href="index.html" target="iframe_a">home</a>.</p>
     <p><iframe src="blank.html" name="iframe_a"></iframe></p>
+
     <div class="feature1">
     <p class="smcaps">Beautiful butterflies<br>marvellous moths<br>precious pollinators</p><br><em>BCNI</em>
     </div>
@@ -79,15 +171,17 @@
     <p>Those were h2-h6 - there's no h7 unless you define it.</p>
 
     <p style='color:#0070C0'>Use < br > to take a new line. Incidentally, I've set the colour here to blue using an inline thingy.</p>
-    <p><i style="font-variant: small-caps">Phyllocnistis unipunctella</i></p>
+    <button type="button" onclick="document.getElementById('mothname').innerHTML = 'Nematopogon metaxella'">Click Me!</button>
+    <p class ="smcaps ita" id="mothname"><i >Phyllocnistis unipunctella</i></p>
     </div>
     <br>
     <p class="one">Default em and defined italic and oblique selectors</p>
     <p>< p ><em class="orig">Geronimo! (em.orig) </em><em class="ita">Geronimo! (em.ita) </em><em class="obl">Geronimo! (em.obl) </em><i class="orig">Geronimo! (i.orig)</i>< / p></p><br>
     <div class="relative"><div class="absolute"><div class="absolute2"></div></div></div>
-    <p>Well done for rummaging! <a class="inline-external"  href="https://github.com/samillar94/samillar94.github.io" target="_blank">Here's a backstage pass! :)</a></p>
+    <p>Well done for rummaging! <a class="inline-external"  href="https://github.com/samillar94/samillar94.github.io" target="_blank">Here's a backstage pass! :)</a><br>Or (in Chrome) just press Ctrl+Shift+I.</p>
     <p><a class="block-internal" href="index.html">Home</a><a class="block-internal" href="mothindex.html">Moth index</a></p>
     <p class="center" style="color:#888">Powered by <a class="inline-external" href="https://pages.github.com/" target="_blank">GitHub Pages</a></p> 
     <br><br>
+    </div>
 </body>
 </html>
