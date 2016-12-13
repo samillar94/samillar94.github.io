@@ -1,8 +1,8 @@
 .one {
-    border-left: 6px solid red;
-    background-color: #111;
-    padding: 3px 6px;
-    text-decoration: overline;
+    border-left: 6px solid blue;
+    background-color: #000;
+    padding: 5px 10px;
+    font-weight: 500;
     text-align: left;
 }
 .feature1 {
@@ -94,7 +94,7 @@ div.menu1 {
     padding: 10px 25px; 
     background-color: #f00;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 } 
 div.drop1{
     display: none;
@@ -123,15 +123,15 @@ div.menu1:hover div.drop1, div.drop1:hover{
 .dropdown {
     position: relative;
     display: inline-block;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 0 0 16px 0;
 }
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #000;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+    z-index: 1;
 }
 .dropdown-content a {
     color: white;
@@ -140,8 +140,12 @@ div.menu1:hover div.drop1, div.drop1:hover{
     text-decoration: none;
     display: block;
     text-align: left;
+    transition-duration: 0.5s;
 }
-.dropdown-content a:hover {background-color: #f00}
+.dropdown-content a:hover {
+    background-color: #f00;
+    transition-duration: 0s;
+}
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -151,13 +155,14 @@ div.menu1:hover div.drop1, div.drop1:hover{
         
 ul.nav3 {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 16px 0;
+    padding: 1px;
     overflow: hidden;
     background-color: rgba(0, 0, 256, 0.50);
 }
 li {
     float: left;
+    margin: 1px;
 }
 li a, .drop3btn {
     display: inline-block;
@@ -181,21 +186,21 @@ li a.active{
 .drop3-content {
     display: none;
     position: absolute;
-    background-color: #ffb3ad;
+    background-color: #800;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
 }
 .drop3-content a {
-    color: black;
-    text-shadow: none;
+    color: white;
     padding: 8px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
+    transition-duration: 0.5s;
 }
 .drop3-content a:hover {
     background-color: red !important;
-    color: white;
+    transition-duration: 0s;
 }
 .drop3:hover .drop3-content {
     display: block;
