@@ -2,127 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandbox | The Flying Chrysalis</title>
     <link rel="stylesheet" type="text/css" href="cat2.css">
+    <link rel="stylesheet" type="text/css" href="sandstyle.css">
     <style>/*Overwrites stylesheet*/
-        h6 {
-            color: #ff6a00
-        } 
-        div.relative {
-            position: relative;
-            width: 400px;
-            height: 200px;
-            background-color: #f00;
-            margin: auto;
-        } 
-        div.absolute {
-            position: absolute;
-            background-color: #d00;
-            top: 10px;
-            left: 10px;
-            width: 200px;
-            height: 100px;
-        }
-        div.absolute2 {
-            position: absolute;
-            background-color: #b00;
-            top: 30px;
-            left: 10px;
-            width: 50px;
-            height: 50px;
-        }  
-        div.yscroll {
-            background-color: #eee;
-            width: 400px;
-            height: 100px;
-            border: 1px dotted black;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            padding: 10px;
-            margin: auto;
-            text-align: justify;
-            text-align-last: left;
-            position: relative;
-        }
-        img.floatright {
-            float: right;
-            margin: 0 0 0 10px;
-        }
-        iframe{
-            height:  400px;
-            width: 600px;
-            border: none;
-            box-shadow: 0 0 10px white;
-        }
-        div.menu1 {
-            display: inline-block;
-            position: relative;
-            text-align: left;
-            min-width: 50px;
-            color: white;
-            padding: 10px 25px; 
-            background-color: #f00;
-            margin: auto;
-            margin-bottom: 10px;
-        } 
-        div.drop1{
-            display: none;
-            position: absolute;
-            bottom: -41px;
-            left: 0;
-            min-width: 50px;
-            background-color:  #d00;
-            color: white;
-            text-align: left;
-            padding: 10px 25px; 
-            z-index: 1
-        }
-        div.menu1:hover div.drop1, div.drop1:hover{
-            display: block;
-        }
-
-        .dropbtn {
-            font: "Segoe UI", Segoe, sans;
-            background-color: rgba(255,0,0,0.5);
-            color: white;
-            padding: 10px 25px; 
-            border: none;
-            cursor: pointer;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-            margin-left: 0px;
-            margin-right: 0px;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #000;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 10px 25px; 
-            background-color: rgba(256,0,0,0.5);
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {background-color: #f00}
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown:hover .dropbtn {
-            background-color: #f00;
-        }
     </style>
 </head>
   
@@ -137,21 +21,44 @@
         </div></a>
     </div>
     <div class="dropdown">
-      <div class="dropbtn">Dropdown v2</div>
+      <div class="dropbtn"><a href="#">Dropdown v2</a></div>
       <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="#">The Caterpillar</a>
+        <a href="#">meticulosa</a>
+        <a href="#">Flickr</a>
+        <a href="#">YouTube</a>
+        <a href="#">NI Micros 2016</a>
+        <a href="#">Periodic table</a>
+        <a href="#">Doctor Who theme</a>
       </div>
     </div>
     <div class="dropdown">
-      <div class="dropbtn">Dropdown v2 last</div>
+      <div class="dropbtn"><a href="#">Dropdown v2 last</a></div>
       <div class="dropdown-content" style="right: 0">
         <a href="#">Link 1</a>
         <a href="#">Link 2</a>
         <a href="#">Link 3</a>
       </div>
     </div>
+    <br>
+    <ul class="nav3">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mothindex.html">Moth index</a></li>
+      <li><a href="javascript:void(0)" class="active">Sandbox</a></li>
+      <li class="drop3">
+        <a href="javascript:void(0)" class="drop3btn">External</a>
+        <div class="drop3-content">
+            <a href="#">The Caterpillar</a>
+            <a href="#">meticulosa</a>
+            <a href="#">Flickr</a>
+            <a href="#">YouTube</a>
+            <a href="#">NI Micros 2016</a>
+            <a href="#">Periodic table</a>
+            <a href="#">Doctor Who theme</a>
+        </div>
+      </li>
+    </ul>
+    <br>
     <p class="feature2">I define the content with HTML, the layout with CSS, and the behaviour with JavaScript.</p>
     <br>
     <p>In the iframe below, <a class="inline-internal" href="sandbox.html" target="iframe_a">reproduce this page</a> or go to the <a class="inline-internal" href="mothindex.html" target="iframe_a">moth index</a>, a <a class="inline-external" href="https://en.wikipedia.org/wiki/Special:Random" target="iframe_a">random Wikipedia page</a> or <a class="inline-internal" href="index.html" target="iframe_a">home</a>.</p>
@@ -168,10 +75,14 @@
     <p class="one">Hello World!</p> 
     <div class="wasp-waist">
     <h2>You can use HTML tags</h2><h3> to</h3><h4> format</h4><h5> the</h5><h6> text.</h6>
-    <p>Those were h2-h6 - there's no h7 unless you define it.</p>
-
-    <p style='color:#0070C0'>Use < br > to take a new line. Incidentally, I've set the colour here to blue using an inline thingy.</p>
-    <button type="button" onclick="document.getElementById('mothname').innerHTML = 'Nematopogon metaxella'">Click Me!</button>
+    <p>p: Those were h2-h6 - there's no h7 unless you define it.</p>
+    <div>div</div>
+    <div>div</div>
+    <a>a</a>
+    <a>a</a>
+    body
+    <p style='color:#0070C0'>p: Use < br > to take a new line. Incidentally, I've set the colour here to blue using an inline thingy.</p>
+    button: <button type="button" onclick="document.getElementById('mothname').innerHTML = 'Nematopogon metaxella'">Click Me!</button>
     <p class ="smcaps ita" id="mothname"><i >Phyllocnistis unipunctella</i></p>
     </div>
     <br>

@@ -1,3 +1,6 @@
+html {
+    font-family: 'Segoe UI', Segoe, sans-serif;
+}
 
 body {
     background-color: black;
@@ -5,7 +8,7 @@ body {
     background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
-    font-family: 'Segoe UI', Segoe, sans-serif;
+
     color:#888;
     font-size: medium;
     max-width: 800px;
@@ -23,9 +26,10 @@ h1 {
 
 
 
-p, h2, h3, h4, h5, h6 {
+p, h2, h3, h4, h5, h6, a {
     text-shadow: 0 0 5px #000;
-    color: #fff
+    color: #fff;
+    text-decoration: none;
 }
 
 p.sub {    
@@ -148,40 +152,4 @@ ol.d {
     text-align: center;
     }
 
-.one {
-    border-left: 6px solid red;
-    background-color: #111;
-    padding: 3px 6px;
-    text-decoration: overline;
-    text-align: left;
-}
-
-.feature1 {
-    background-color: #002;
-    text-align: center;
-    padding: 20px;
-    max-width: 400px;
-    margin: auto;
-    border: 1px solid white;
-}   
- 
-.feature2 {
-    max-width: 500px;
-    min-width:  100px;
-    margin: auto;
-    background-color: #001;
-    text-align: center;
-    padding:  20px;
-    border: 10px solid red;
-    border-radius: 50px;
-}   
-        
-.feature3 {
-    max-width: 500px;
-    min-width:  100px;
-    margin: 20px;
-    padding:  20px;
-    background-color: #000022;
-    text-align: center;
-}   
 
