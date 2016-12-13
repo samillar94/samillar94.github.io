@@ -26,7 +26,7 @@ h1 {
 
 
 
-p, h2, h3, h4, h5, h6, a {
+p, h2, h3, h4, h5, h6, a, ul, ol, div {
     text-shadow: 0 0 5px #000;
     color: #fff;
     text-decoration: none;
@@ -126,6 +126,11 @@ a.block-internal:hover, a.block-internal:active {
     width: 60px;
     border-radius: 10px;
     text-shadow: inherit inherit 5px #000; 
+}
+
+ul, ol{
+    text-align: left;
+    max-width: 400px;
 }
 
 ul.circle {
