@@ -41,23 +41,37 @@
       </div>
     </div>
     <ul class="nav3">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="mothindex.html">Moth index</a></li>
-      <li><a href="javascript:void(0)" class="active">Sandbox</a></li>
-      <li class="drop3">
-        <a href="javascript:void(0)" class="drop3btn">External</a>
-        <div class="drop3-content">
-            <a href="#">The Caterpillar</a>
-            <a href="#">meticulosa</a>
-            <a href="#">Flickr</a>
-            <a href="#">YouTube</a>
-            <a href="#">NI Micros 2016</a>
-            <a href="#">Periodic table</a>
-            <a href="#">Doctor Who theme</a>
+      <li><a href="index.html" class="internal">Home</a></li>
+      <li><a href="mothindex.html" class="internal">Moth index</a></li>
+      <li><a href="javascript:void(0)" class="this-page">Sandbox</a>
+      <div class="drop-content">
+          <a class="this-page" href="#hello">Hello World!</a>
+          <a class="this-page" href="#em">Emphasis tags</a></div></li>
+      <li>
+        <a href="javascript:void(0)" class="external">Stuff</a>
+        <div class="drop-content">
+            <a class="external" href="https://millar153.wordpress.com/" target="_blank">The Caterpillar</a>
+            <a class="external" href="#">meticulosa</a>
+            <a class="external" href="#">Flickr</a>
+            <a class="external" href="#">YouTube</a>
+            <a class="external" href="#">NI Micros 2016</a>
+            <a class="external" href="#">Periodic table</a>
+            <a class="external" href="#">Doctor Who theme</a>
+        </div>
+      </li>  
+      <li>
+        <a href="https://en.wikipedia.org/wiki/Special:Random" class="external" target="_blank">Random Wikipedia page</a>
+        <div class="drop-content">
         </div>
       </li>
     </ul>
     <p class="feature2">I define the content with HTML, the layout with CSS, and the behaviour with JavaScript.</p>
+    <p>List format...</p>
+    <ul>
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+    </ul>
     <p>In the iframe below, <a class="inline-internal" href="sandbox.html" target="iframe_a">reproduce this page</a> or go to the <a class="inline-internal" href="mothindex.html" target="iframe_a">moth index</a>, a <a class="inline-external" href="https://en.wikipedia.org/wiki/Special:Random" target="iframe_a">random Wikipedia page</a> or <a class="inline-internal" href="index.html" target="iframe_a">home</a>.</p>
     <p><iframe src="blank.html" name="iframe_a"></iframe></p>
 
@@ -69,7 +83,7 @@
     <br>
      I've set the body style to produce grey text if no selector is applied.
     <br><br>
-    <p class="one">Hello World!</p> 
+    <p class="one" id="hello">Hello World!</p> 
     <div class="wasp-waist">
     <h2>You can use HTML tags</h2><h3> to</h3><h4> format</h4><h5> the</h5><h6> text.</h6>
     <p>p: Those were h2-h6 - there's no h7 unless you define it.</p>
@@ -83,7 +97,7 @@
     <p class ="smcaps ita" id="mothname"><i >Phyllocnistis unipunctella</i></p>
     </div>
     <br>
-    <p class="one">Default em and defined italic and oblique selectors</p>
+    <p class="one" id="em">Default em and defined italic and oblique selectors</p>
     <p>< p ><em class="orig">Geronimo! (em.orig) </em><em class="ita">Geronimo! (em.ita) </em><em class="obl">Geronimo! (em.obl) </em><i class="orig">Geronimo! (i.orig)</i>< / p></p><br>
     <div class="relative"><div class="absolute"><div class="absolute2"></div></div></div>
     <p>Well done for rummaging! <a class="inline-external"  href="https://github.com/samillar94/samillar94.github.io" target="_blank">Here's a backstage pass! :)</a><br>Or (in Chrome) just press Ctrl+Shift+I.</p>

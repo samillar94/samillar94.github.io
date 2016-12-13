@@ -156,52 +156,62 @@ div.menu1:hover div.drop1, div.drop1:hover{
 ul.nav3 {
     list-style-type: none;
     margin: 0 0 16px 0;
-    padding: 1px;
+    padding: 2px;
     overflow: hidden;
     background-color: rgba(0, 0, 256, 0.50);
 }
-li {
+ul.nav3 li {
     float: left;
-    margin: 1px;
+    margin: 2px;
 }
-li a, .drop3btn {
+ul.nav3 li a{
     display: inline-block;
     color: white;
     text-align: center;
     padding: 8px 16px;
     text-decoration: none;
 }
-li a:hover:not(.active){
+ul.nav3 li:hover a.internal{
     background-color: rgb(0,126,0);
 }
-.drop3:hover .drop3btn {
+ul.nav3 li:hover a.external {
     background-color: rgb(255,0,0);
 }
-li.drop3 {
-    display: inline-block;
-}
-li a.active{
+ul.nav3 li a.this-page{
     background-color: #00f;
 }
-.drop3-content {
+ul.nav3 li div.drop-content {
     display: none;
     position: absolute;
-    background-color: #800;
     min-width: 160px;
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
 }
-.drop3-content a {
+ul.nav3 li div.drop-content a.external {
     color: white;
+    background-color: #800;
     padding: 8px 16px;
     text-decoration: none;
-    display: block;
-    text-align: left;
+    display: block !important;
+    text-align: left !important;
     transition-duration: 0.5s;
 }
-.drop3-content a:hover {
+ul.nav3 li div.drop-content a.external:hover {
     background-color: red !important;
     transition-duration: 0s;
 }
-.drop3:hover .drop3-content {
+ul.nav3 li div.drop-content a.this-page {
+    color: white;
+    background-color: #008;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block !important;
+    text-align: left !important;
+    transition-duration: 0.5s;
+}
+ul.nav3 li div.drop-content a.this-page:hover {
+    background-color: blue !important;
+    transition-duration: 0s;
+}
+ul.nav3 li:hover div.drop-content {
     display: block;
 }        

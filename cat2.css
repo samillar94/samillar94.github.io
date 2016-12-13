@@ -136,10 +136,6 @@ ul.square {
     list-style-type: square;
 }
 
-li:hover {
-    background-color:  #222;
-}
-
 ol.c {
     list-style-type: upper-roman;
 }
