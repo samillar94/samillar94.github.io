@@ -156,13 +156,11 @@ div.menu1:hover div.drop1, div.drop1:hover{
 ul.nav3 {
     list-style-type: none;
     margin: 0 0 16px 0;
-    padding: 2px;
     overflow: hidden;
     background-color: rgba(0, 0, 256, 0.50);
 }
 ul.nav3 li {
     float: left;
-    margin: 2px;
 }
 ul.nav3 li a{
     display: inline-block;
