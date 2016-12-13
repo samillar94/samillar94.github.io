@@ -35,7 +35,12 @@
 h6 {
     color: #ff6a00
 } 
-        
+
+.wasp-waist{
+    max-width: 400px;
+    margin: auto;
+}   
+     
 div.relative {
     position: relative;
     max-width: 400px;
@@ -106,7 +111,7 @@ div.drop1{
     color: white;
     text-align: left;
     padding: 10px 25px; 
-    z-index: 1
+    z-index: 0
 }
 div.menu1:hover div.drop1, div.drop1:hover{
     display: block;
@@ -124,6 +129,7 @@ div.menu1:hover div.drop1, div.drop1:hover{
     position: relative;
     display: inline-block;
     margin: 0 0 16px 0;
+    z-index: 0;
 }
 .dropdown-content {
     display: none;
@@ -131,7 +137,7 @@ div.menu1:hover div.drop1, div.drop1:hover{
     background-color: #000;
     min-width: 160px;
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
-    z-index: 1;
+    z-index: 0;
 }
 .dropdown-content a {
     color: white;
@@ -153,66 +159,3 @@ div.menu1:hover div.drop1, div.drop1:hover{
     background-color: #f00;
 }
         
-ul.nav3 {
-    list-style-type: none;
-    margin: 0 0 16px 0;
-    overflow: hidden;
-    background-color: rgba(0, 0, 256, 0.50);
-}
-ul.nav3 li {
-    float: left;
-}
-ul.nav3 li a{
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition-duration: 0.5s;
-}
-ul.nav3 li:hover a.internal{
-    background-color: rgb(0,126,0);
-    transition-duration: 0s;
-}
-ul.nav3 li:hover a.external {
-    background-color: rgb(255,0,0);
-    transition-duration: 0s;
-}
-ul.nav3 li a.this-page{
-    background-color: #00f;
-}
-ul.nav3 li div.drop-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
-}
-ul.nav3 li div.drop-content a.external {
-    color: white;
-    background-color: #800;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block !important;
-    text-align: left !important;
-    transition-duration: 0.5s;
-}
-ul.nav3 li div.drop-content a.external:hover {
-    background-color: red !important;
-    transition-duration: 0s;
-}
-ul.nav3 li div.drop-content a.this-page {
-    color: white;
-    background-color: #008;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block !important;
-    text-align: left !important;
-    transition-duration: 0.5s;
-}
-ul.nav3 li div.drop-content a.this-page:hover {
-    background-color: blue !important;
-    transition-duration: 0s;
-}
-ul.nav3 li:hover div.drop-content {
-    display: block;
-}        
