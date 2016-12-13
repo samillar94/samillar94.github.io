@@ -170,12 +170,15 @@ ul.nav3 li a{
     text-align: center;
     padding: 8px 16px;
     text-decoration: none;
+    transition-duration: 0.5s;
 }
 ul.nav3 li:hover a.internal{
     background-color: rgb(0,126,0);
+    transition-duration: 0s;
 }
 ul.nav3 li:hover a.external {
     background-color: rgb(255,0,0);
+    transition-duration: 0s;
 }
 ul.nav3 li a.this-page{
     background-color: #00f;
