@@ -1,10 +1,4 @@
-.one {
-    border-left: 6px solid blue;
-    background-color: #000;
-    padding: 5px 10px;
-    font-weight: 500;
-    text-align: left;
-}
+
 .feature1 {
     background-color: #002;
     text-align: center;
@@ -88,6 +82,12 @@ iframe{
     width: 800px;
     border: none;
     box-shadow: 0 0 10px 0 white;
+}
+
+div.headinglinks{
+    max-width: 700px;
+    margin: auto;
+    margin-top: 20px;
 }
         
 div.menu1 {

@@ -16,24 +16,30 @@ body {
     text-align: center;   
 }
 
-h1 {
-    color: #004;
-    margin-bottom: 5px;
-    font-family: 'Segoe UI',sans-serif;
-    font-size: 36px;
-    text-shadow: 0 0 10px white;
-}
-
-.container {
+div.container {
     position: relative;
 }
 
-.bottomright {
+div.icon{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+img.icon{
+    width: 120px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px white;
+    margin: auto;
+    margin-top: 10px;
+}
+
+div.bottomright {
     position: absolute;
     bottom: 8px;
     right: 16px;
     text-align: right;
-    max-width: 336px;
+    ;
 }
 
 p, h2, h3, h4, h5, h6, a, ul, ol {
@@ -42,11 +48,27 @@ p, h2, h3, h4, h5, h6, a, ul, ol {
     text-decoration: none;
 }
 
+h1 {
+    color: #004;
+    margin-bottom: 5px;
+    font-family: 'Segoe UI',sans-serif;
+    font-size: 36px;
+    text-shadow: 0 0 10px white;
+}
+
 p.sub {    
     color: #004;
     text-shadow: 0 0 10px #fff;
     margin-top: 0;
     margin-bottom: 8px;
+}
+
+h2.one {
+    border-left: 6px solid #080;
+    background-color: #000;
+    padding: 5px 10px;
+    font-weight: 300;
+    text-align: left;
 }
 
 .ita {
@@ -69,12 +91,6 @@ p.sub {
 .smcaps {
     font-weight: 100;
     font-variant:  small-caps;
-}
-
-.headinglinks{
-    max-width: 700px;
-    margin: auto;
-    margin-top: 20px;
 }
 
 a.inline-external:link, a.inline-external:visited {
@@ -104,11 +120,13 @@ a.block-external:link, a.block-external:visited {
     text-decoration: none;
     display: inline-block;
     font-style: inherit;
+    transition-duration: 0.5s;
 }
 
 a.block-external:hover, a.block-external:active {
     background-color: red;
-    font-style: inherit
+    font-style: inherit;
+    transition-duration: 0s;
 }
 
 a.block-internal:link, a.block-internal:visited {
@@ -119,11 +137,13 @@ a.block-internal:link, a.block-internal:visited {
     text-decoration: none;
     display: inline-block;
     font-style: inherit;
+    transition-duration: 0.5s;
 }
 
 a.block-internal:hover, a.block-internal:active {
     background-color: rgba(0, 126, 0, 1);
     font-style: inherit;
+    transition-duration: 0s;
 }
 
 .youtube{
@@ -137,7 +157,12 @@ a.block-internal:hover, a.block-internal:active {
     height: 60px;
     width: 60px;
     border-radius: 10px;
-    text-shadow: inherit inherit 5px #000; 
+    transition-duration: 0.5s; 
+}
+
+.gravatar:hover {
+    box-shadow: 0 0 5px white;
+    transition-duration: 0s;
 }
 
 ul, ol{
@@ -169,7 +194,7 @@ ul.nav3 {
     margin: 0 0 16px 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgba(0, 0, 256, 0.50);
+    background-color: rgba(0, 128, 0, 0.50);
 }
 ul.nav3 li {
     float: left;
@@ -182,16 +207,16 @@ ul.nav3 li a{
     text-decoration: none;
     transition-duration: 0.5s;
 }
-ul.nav3 li:hover a.internal{
-    background-color: rgb(0,126,0);
+ul.nav3 li:hover a.internal, ul.nav3 li:focus a.internal{
+    background-color: #080;
     transition-duration: 0s;
 }
-ul.nav3 li:hover a.external {
-    background-color: rgb(255,0,0);
+ul.nav3 li:hover a.external, ul.nav3 li:focus a.external{
+    background-color: #f00;
     transition-duration: 0s;
 }
 ul.nav3 li a.this-page{
-    background-color: #00f;
+    background-color: #080;
 }
 ul.nav3 li div.drop-content {
     display: none;
@@ -210,7 +235,7 @@ ul.nav3 li div.drop-content a.external {
     transition-duration: 0.5s;
 }
 ul.nav3 li div.drop-content a.external:hover {
-    background-color: red !important;
+    background-color: #f00 !important;
     transition-duration: 0s;
 }
 ul.nav3 li div.drop-content a.internal {
@@ -226,19 +251,7 @@ ul.nav3 li div.drop-content a.internal:hover {
     background-color: #080 !important;
     transition-duration: 0s;
 }
-ul.nav3 li div.drop-content a.this-page {
-    color: white;
-    background-color: #008;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block !important;
-    text-align: left !important;
-    transition-duration: 0.5s;
-}
-ul.nav3 li div.drop-content a.this-page:hover {
-    background-color: blue !important;
-    transition-duration: 0s;
-}
-ul.nav3 li:hover div.drop-content {
+
+ul.nav3 li:hover div.drop-content, ul.nav3 li:focus div.drop-content {
     display: block;
 }        
