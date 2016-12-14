@@ -16,11 +16,30 @@ body {
     text-align: center;   
 }
 
+p, a, h2, h3, h4, h5, h6, ul, ol {
+    text-shadow: 0 0 5px #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.greeting{
+    font-weight: 500;
+    font-size: larger;
+}
+
+.poem{
+    font-size: smaller;
+}
+
 div.container {
     position: relative;
 }
 
-div.icon{
+div.container > img{
+    border-radius: 0 0 20px 20px;
+}
+
+div.icon {
     position: absolute;
     top: 40px;
     left: 40px;
@@ -31,7 +50,6 @@ img.icon{
     border-radius: 20px;
     box-shadow: 0 0 10px white;
     margin: auto;
-    margin-top: 10px;
 }
 
 div.bottomright {
@@ -41,10 +59,15 @@ div.bottomright {
     text-align: right;
 }
 
-p, h2, h3, h4, h5, h6, a, ul, ol {
-    text-shadow: 0 0 5px #000;
-    color: #fff;
-    text-decoration: none;
+div.headinglinks{
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+  
+
+p, h2, h3, h4, h5, h6{
+    clear: left;
 }
 
 h1 {
@@ -68,6 +91,7 @@ h2.one {
     padding: 5px 10px;
     font-weight: 300;
     text-align: left;
+    font-size: inherit;
 }
 
 .ita {
@@ -92,15 +116,6 @@ h2.one {
     font-variant:  small-caps;
 }
 
-a.inline-external:link, a.inline-external:visited {
-    text-decoration: none;
-    color: #ffb3ad;
-}
-
-a.inline-external:hover, a.inline-external:active {
-    color: red;
-}
-
 a.inline-internal:link, a.inline-internal:visited {
     text-decoration: none;
     color: rgb(167, 255, 160);
@@ -110,22 +125,13 @@ a.inline-internal:hover, a.inline-internal:active {
     color:  rgb(0, 170, 0);
 }
 
-
-a.block-external:link, a.block-external:visited {
-    background-color:  rgba(255, 0, 0, 0.5);
-    color: white;
-    padding: 10px 25px; 
-    margin: 1px;
+a.inline-external:link, a.inline-external:visited {
     text-decoration: none;
-    display: inline-block;
-    font-style: inherit;
-    transition-duration: 0.5s;
+    color: #ffb3ad;
 }
 
-a.block-external:hover, a.block-external:active {
-    background-color: red;
-    font-style: inherit;
-    transition-duration: 0s;
+a.inline-external:hover, a.inline-external:active {
+    color: red;
 }
 
 a.block-internal:link, a.block-internal:visited {
@@ -145,12 +151,75 @@ a.block-internal:hover, a.block-internal:active {
     transition-duration: 0s;
 }
 
-.youtube{
-    background-image: url(YouTube_light_color_icon.png);
-    background-position: 10px 10px;    
-    padding-left: 44px;
-    color: #fff;
+
+a.block-external:link, a.block-external:visited{
+    background-color:  rgba(255, 0, 0, 0.5);
+    background-image: none;
+    color: white;
+    text-shadow: 0 0 5px 0 black;
+    padding: 10px 25px; 
+    margin: 1px;
+    text-decoration: none;
+    display: inline-block;
+    /*font-style: inherit;*/
+    transition-duration: 0.5s;
 }
+
+a.block-external:hover {
+    background-color: red;
+    transition-duration: 0s;
+
+}
+
+a.caterpillar:hover{
+    background-image: url(rutigblog180.jpg);
+    transition-duration: 0.5s;
+    background-position: center center;
+    background-size: cover;
+}
+
+a.meticulosa:hover{
+    background-image: url(anshablog180.jpg);
+    transition-duration: 0.5s;
+    background-position: center center;
+    background-size: cover;
+}
+
+a.flickr:hover {
+    background-image: url(lycle-head-360.jpg);
+    transition-duration: 0.5s;
+    background-position: center center;
+    background-size: cover;
+}
+
+a.youtube:hover {
+    background-image: url(grayl-head-360.jpg);
+    transition-duration: 0.5s;
+    background-position: center center;
+    background-size: cover;
+}
+
+a.checklist:hover {
+    background-image: url(eucam-head-360.jpg);
+    transition-duration: 0.5s;
+    background-position: center center;
+    background-size: cover;
+}
+
+a.periodic:hover {
+    background-image: url(petab-head-360.jpg);
+    transition-duration: 0.5s;
+    background-position: center center;
+    background-size: cover;
+}
+
+a.geronimo:hover {
+    background-image: url(geron-head-360.jpg);
+    transition-duration: 0.5s;
+    background-position: center center;
+    background-size: cover;
+}
+
 
 .gravatar {
     height: 60px;
@@ -190,75 +259,85 @@ ol.d {
 
 ul.nav3 {
     list-style-type: none;
-    margin: 0 0 16px 0;
+    margin: auto;
     padding: 0;
-    overflow: hidden;
     background-color: rgba(0, 128, 0, 0.50);
+    height: 37px;
 }
 ul.nav3 > li {
+    position: relative;
     float: left;
 }
 ul.nav3 > li > a{
-    display: inline-block;
+    padding: 8px 16px;
+    display: inline-block;  
     color: white;
     text-align: center;
-    padding: 8px 16px;
     text-decoration: none;
     transition-duration: 0.5s;
 }
-ul.nav3 li:hover a.internal, ul.nav3 li:focus a.internal{
+
+ul.nav3 li:hover > a.internal, ul.nav3 li:focus > a.internal{
     background-color: #080;
     transition-duration: 0s;
 }
-ul.nav3 li:hover a.external, ul.nav3 li:focus a.external{
+ul.nav3 li:hover > a.external, ul.nav3 li:focus > a.external{
     background-color: #f00;
     transition-duration: 0s;
 }
-ul.nav3 li a.this-page{
+ul.nav3 li > a.this-page{
     background-color: #080;
 }
-ul.nav3 li ul.drop-content {
+
+ul.nav3 > li > ul{
     display: none;
     list-style-type: none;
     position: absolute;
+    left: 0;
+    top: 100%;
     padding: 0;
     text-align: left;
     min-width: 160px;
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
-    border: 2px solid white;
     z-index: 1;
 }
-ul.nav3 li ul li ul.two{
-    padding-left: 150px;
+
+ul.nav3 > li > ul > li{
+    position: relative;
 }
 
-ul.nav3 li ul.drop-content li a.external {
-    color: white;
+ul.nav3 > li > ul a{
+    color: white;    
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block !important;
+    text-align: left !important;
+    transition-duration: 0.5s;    
+}
+ul.nav3 > li > ul a.external {
     background-color: #800;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block !important;
-    text-align: left !important;
-    transition-duration: 0.5s;
 }
-ul.nav3 li ul.drop-content li a.external:hover {
-    background-color: #f00 !important;
+ul.nav3 > li > ul a.external:hover {
+    background-color: #f00;
     transition-duration: 0s;
 }
-ul.nav3 li ul.drop-content li a.internal {
-    color: white;
+ul.nav3 > li > ul a.internal {
     background-color: #040;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block !important;
-    text-align: left !important;
-    transition-duration: 0.5s;
 }
-ul.nav3 li ul.drop-content li a.internal:hover {
-    background-color: #080 !important;
+ul.nav3 > li > ul a.internal:hover {
+    background-color: #080;
     transition-duration: 0s;
 }
 
-ul > li:hover > ul.drop-content/**, ul li:focus > ul.drop-content**/ {
+ul.nav3 li:hover > ul, ul.nav3 li:focus > ul {
     display: block;
 }        
+ul.nav3 > li > ul > li > ul{
+    list-style-type: none;
+    min-width: 160px;
+    position: absolute;
+    display: none;
+    left: 100%;
+    top: 0;
+    padding: 0;
+}

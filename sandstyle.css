@@ -84,12 +84,13 @@ iframe{
     box-shadow: 0 0 10px 0 white;
 }
 
-div.headinglinks{
-    max-width: 700px;
-    margin: auto;
-    margin-top: 20px;
+.youtube-icon{
+    background-image: url(YouTube_light_color_icon.png);
+    background-position: 10px 10px;    
+    padding-left: 44px;
+    color: #fff;
 }
-        
+      
 div.menu1 {
     display: inline-block;
     position: relative;
