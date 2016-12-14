@@ -39,7 +39,6 @@ div.bottomright {
     bottom: 8px;
     right: 16px;
     text-align: right;
-    ;
 }
 
 p, h2, h3, h4, h5, h6, a, ul, ol {
@@ -196,10 +195,10 @@ ul.nav3 {
     overflow: hidden;
     background-color: rgba(0, 128, 0, 0.50);
 }
-ul.nav3 li {
+ul.nav3 > li {
     float: left;
 }
-ul.nav3 li a{
+ul.nav3 > li > a{
     display: inline-block;
     color: white;
     text-align: center;
@@ -218,14 +217,22 @@ ul.nav3 li:hover a.external, ul.nav3 li:focus a.external{
 ul.nav3 li a.this-page{
     background-color: #080;
 }
-ul.nav3 li div.drop-content {
+ul.nav3 li ul.drop-content {
     display: none;
+    list-style-type: none;
     position: absolute;
+    padding: 0;
+    text-align: left;
     min-width: 160px;
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+    border: 2px solid white;
     z-index: 1;
 }
-ul.nav3 li div.drop-content a.external {
+ul.nav3 li ul li ul.two{
+    padding-left: 150px;
+}
+
+ul.nav3 li ul.drop-content li a.external {
     color: white;
     background-color: #800;
     padding: 8px 16px;
@@ -234,11 +241,11 @@ ul.nav3 li div.drop-content a.external {
     text-align: left !important;
     transition-duration: 0.5s;
 }
-ul.nav3 li div.drop-content a.external:hover {
+ul.nav3 li ul.drop-content li a.external:hover {
     background-color: #f00 !important;
     transition-duration: 0s;
 }
-ul.nav3 li div.drop-content a.internal {
+ul.nav3 li ul.drop-content li a.internal {
     color: white;
     background-color: #040;
     padding: 8px 16px;
@@ -247,11 +254,11 @@ ul.nav3 li div.drop-content a.internal {
     text-align: left !important;
     transition-duration: 0.5s;
 }
-ul.nav3 li div.drop-content a.internal:hover {
+ul.nav3 li ul.drop-content li a.internal:hover {
     background-color: #080 !important;
     transition-duration: 0s;
 }
 
-ul.nav3 li:hover div.drop-content, ul.nav3 li:focus div.drop-content {
+ul > li:hover > ul.drop-content/**, ul li:focus > ul.drop-content**/ {
     display: block;
 }        
