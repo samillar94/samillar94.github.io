@@ -68,6 +68,12 @@ h1 {
     text-shadow: 0 0 10px white;
 }
 
+@media only screen and (max-width: 370px){
+    h1 {
+        font-size: 24px;
+    }
+}
+
 p.sub {    
     color: #000;
     text-shadow: 0 0 10px #fff;
