@@ -7,11 +7,7 @@ html {
 }
 
 body {
-    background-color: black;
-    background-image: url("thecaterpillar1.5.jpg");
-    background-repeat: repeat;
-    background-position: center;
-    background-attachment: fixed;
+    background: black url("thecaterpillar1.5.jpg") repeat fixed center;
     color: #888;
     font-size: medium;
     max-width: 800px;
@@ -28,37 +24,25 @@ p, a, h2, h3, h4, h5, h6, ul, ol {
 .greeting{
     font-weight: 500;
     font-size: larger;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 .poem{
     font-size: smaller;
 }
 
-div.container {
+div.head {
     position: relative;
+    
 }
 
-div.container > img.head{
-    border-radius: 0 0 20px 20px;
+div.head > img {
     width: 100%;
+    vertical-align: bottom;
 }
 
-div.icon {
-    width: 120px;
-    height: 120px;
-    border-radius: 20px;
-    box-shadow: 0 0 5px white;
-    margin: auto;
-    background-image: url("favicom-240.jpg");
-    transition-duration: 1s;    
-}
-
-div.icon:hover{
-    box-shadow: 0 0 10px 5px white;    
-    background-image: url("favicon-120.png");
-}
-
-div.bottomright {
+div.head-text {
     position: absolute;
     bottom: 8px;
     right: 16px;
@@ -68,7 +52,7 @@ div.bottomright {
 h1 {
     color: #000;
     margin-bottom: 5px;
-    font-family: 'Segoe UI',sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 36px;
     text-shadow: 0 0 10px white;
 }
@@ -86,12 +70,21 @@ p.sub {
     margin-bottom: 8px;
 }
 
-div.headinglinks{
-    max-width: 600px;
+div.icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px white;
     margin: auto;
-    margin-top: 20px;
+    background-image: url("favicom-240.jpg");
+    background-size: 100%;
+    transition-duration: 0.5s;    
 }
-  
+
+div.icon:hover{
+    box-shadow: 0 0 10px 5px white;    
+    background-image: url("favicon-120.png");
+}
 
 p, h2, h3, h4, h5, h6{
     clear: left;
@@ -99,151 +92,12 @@ p, h2, h3, h4, h5, h6{
 
 h2.one {
     border-left: 6px solid #080;
-    background-color: #000;
+    background-color: #040;
     padding: 5px 10px;
     font-weight: 300;
     text-align: left;
-    font-size: inherit;
+    font-size: medium;
     margin-top: 2em;
-}
-
-.ita {
-    font-style:  italic;
-    }
-
-.obl {
-    font-style:  oblique;
-    /* This is
-    a multi-line
-    comment */
-    }
-
-.orig {
-    font-family: 'Segoe UI', Segoe, sans-serif;
-    color:#888;
-    font-size: medium;    
-}
-
-.smcaps {
-    font-weight: 100;
-    font-variant:  small-caps;
-}
-
-a.inline-internal:link, a.inline-internal:visited {
-    text-decoration: none;
-    color: rgb(167, 255, 160);
-}
-
-a.inline-internal:hover, a.inline-internal:active {
-    color:  rgb(0, 170, 0);
-}
-
-a.inline-external:link, a.inline-external:visited {
-    text-decoration: none;
-    color: #ffb3ad;
-}
-
-a.inline-external:hover, a.inline-external:active {
-    color: red;
-}
-
-a.block-internal:link, a.block-internal:visited {
-    background-color: rgba(0, 126, 0, 0.50) ;
-    color: white;
-    padding: 10px 25px; 
-    margin: 1px;
-    text-decoration: none;
-    display: inline-block;
-    font-style: inherit;
-    transition-duration: 0.5s;
-}
-
-a.block-internal:hover, a.block-internal:active {
-    background-color: rgba(0, 126, 0, 1);
-    font-style: inherit;
-    transition-duration: 0s;
-}
-
-
-a.block-external:link, a.block-external:visited{
-    background-color:  rgba(255, 0, 0, 0.5);
-    background-image: none;
-    color: white;
-    text-shadow: 0 0 5px 0 black;
-    padding: 10px 25px; 
-    margin: 1px;
-    text-decoration: none;
-    display: inline-block;
-    /*font-style: inherit;*/
-    transition-duration: 0.5s;
-}
-
-a.block-external:hover {
-    background-color: red;
-    transition-duration: 0s;
-
-}
-
-a.caterpillar:hover{
-    background-image: url(rutigblog180.jpg);
-    transition-duration: 0.5s;
-    background-position: center center;
-    background-size: cover;
-}
-
-a.meticulosa:hover{
-    background-image: url(anshablog180.jpg);
-    transition-duration: 0.5s;
-    background-position: center center;
-    background-size: cover;
-}
-
-a.flickr:hover {
-    background-image: url(lycle-head-360.jpg);
-    transition-duration: 0.5s;
-    background-position: center center;
-    background-size: cover;
-}
-
-a.youtube:hover {
-    background-image: url(grayl-head-360.jpg);
-    transition-duration: 0.5s;
-    background-position: center center;
-    background-size: cover;
-}
-
-a.checklist:hover {
-    background-image: url(eucam-head-360.jpg);
-    transition-duration: 0.5s;
-    background-position: center center;
-    background-size: cover;
-}
-
-a.periodic:hover {
-    background-image: url(petab-head-360.jpg);
-    transition-duration: 0.5s;
-    background-position: center center;
-    background-size: cover;
-}
-
-a.geronimo:hover {
-    background-image: url(geron-head-360.jpg);
-    transition-duration: 0.5s;
-    background-position: center center;
-    background-size: cover;
-}
-
-
-.gravatar {
-    height: 60px;
-    width: 60px;
-    border-radius: 10px;
-    transition-duration: 0.5s; 
-}
-
-.gravatar:hover {
-    box-shadow: 0 0 5px white;
-    transition-duration: 0s;
 }
 
 ul, ol{
@@ -266,48 +120,266 @@ ol.d {
     list-style-type: lower-alpha;
 }        
 
+
+.ita {
+    font-style:  italic;
+    }
+
+.obl {
+    font-style:  oblique;
+    /* This is
+    a multi-line
+    comment */
+    }
+
+.orig {
+    font-family: 'Segoe UI', Segoe, sans-serif;
+    color: #888;
+    font-size: medium;    
+}
+
+.smcaps {
+    font-weight: 100;
+    font-variant: small-caps;
+}
+
 .center {
     text-align: center;
     }
 
-ul.nav3 {
+
+a.inline-internal:link, a.inline-internal:visited {
+    color: rgb(167, 255, 160);
+}
+
+a.inline-internal:hover, a.inline-internal:active {
+    color:  rgb(0, 170, 0);
+}
+
+a.inline-external:link, a.inline-external:visited {
+    color: #ffb3ad;
+}
+
+a.inline-external:hover, a.inline-external:active {
+    color: red;
+}
+
+a.block-internal:link, a.block-internal:visited {
+    background-color: rgba(0, 126, 0, 0.50) ;
+    padding: 10px 25px; 
+    margin: 1px;
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+
+a.block-internal:hover, a.block-internal:active {
+    background-color: rgba(0, 126, 0, 1);
+    transition-duration: 0s;
+}
+
+a.block-external-old:link, a.block-external-old:visited{
+    background-color:  rgba(255, 0, 0, 0.5);
+    padding: 10px 25px; 
+    margin: 1px;
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+
+a.block-external-old:hover {
+    background-color: red;
+    transition-duration: 0s;
+}
+
+div.headinglinks{
+    max-width: 700px;
+    margin: auto;
+    margin-top: 20px;
+}  
+
+a.block-external:link, a.block-external:visited{
+    background-color:  rgba(255, 0, 0, 0.5);
+    background-image: none;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+    text-shadow: 0 0 5px 0 black;
+    padding: 10px 25px; 
+    margin: 1px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    transition-duration: 0.5s;
+    width: 160px;
+}
+
+a.block-external:hover {
+    background-color: red;
+}
+
+a.block-external:hover::after, a.block-external:hover::before{
+    font-variant: small-caps;
+    font-stretch:  semi-condensed;
+}
+
+a.caterpillar:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(rutigblog180.jpg);
+    padding-bottom: 108px;
+}
+
+a.caterpillar:hover::after {
+    content: "blog";
+}
+
+a.meticulosa:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(anshablog180.jpg);
+    padding-bottom: 66px;
+}
+
+a.meticulosa:hover::after {
+    content: "moth recording blog";
+}
+
+a.flickr:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(lycle-head-360.jpg);
+    padding-bottom: 108px;
+}
+
+a.flickr:hover::before {
+    content: "flickr      ";
+}
+
+a.youtube:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(grayl-head-360.jpg);
+    padding-bottom: 108px;
+}
+
+a.youtube:hover::before {
+    content: "youtube      ";
+}
+
+a.checklist:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(eucam-head-360.jpg);
+    padding-bottom: 66px;
+}
+
+a.checklist:hover::after {
+    content: "micro-moth county distributions";
+}
+
+a.periodic:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(petab-head-360.jpg);
+    padding-bottom: 108px;
+}
+
+a.periodic:hover::before {
+    content: "customisable ";
+}
+
+a.geronimo:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(geron-head-360.jpg);
+    padding-bottom: 45px;
+}
+
+a.geronimo:hover::after {
+    content: "       doctor who theme - original arrangement";
+}
+
+.gravatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    transition-duration: 0.5s; 
+}
+
+.gravatar:hover {
+    box-shadow: 0 0 5px white;
+    transition-duration: 0s;
+}
+
+@media only screen and (max-width:500px){
+    nav {
+        height: 0 !important;
+    }
+
+    nav ul > li {
+        background-color: rgba(0, 128, 0, 0.50);    
+    }
+
+    nav ul li {
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        padding-left: 4px !important;
+    }
+
+    nav ul ul {
+        position: relative !important;
+        top: 8px !important;
+        left: 0 !important;
+        width: 100% !important;
+        display: inline-block;
+    }
+
+    #endbar {
+        display: inline-block;
+    }
+}
+
+nav {
+    height: 37px;
+    background-color: rgba(0, 128, 0, 0.50); 
+}
+
+nav ul {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    height: fit-content;
-
 }
 
-ul.nav3 li {
+nav ul li {
     position: relative;
     float: left;
-    background-color: rgba(0, 128, 0, 0.50); 
     padding: 8px 0;
     text-indent: 0;
     display: inline-block;  
     color: white;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     transition-duration: 0.5s;
 }
-
-ul.nav3 li a{
-    padding: 8px 16px;
+nav > ul > li {
+    background-color: none !important;
+}
+nav ul ul li {
+    background-color: rgba(0, 128, 0, 0.50); 
 }
 
-ul.nav3 li.internal:hover, ul.nav3 li.internal:focus{
+nav ul li a{
+    display: block;
+    padding: 0 16px
+}
+
+nav ul li.internal:hover, 
+nav ul li.internal:focus{
     background-color: #080;
     transition-duration: 0s;
 }
-ul.nav3 li.external:hover, ul.nav3 li.external:focus{
+nav ul li.external:hover, 
+nav ul li.external:focus{
     background-color: #f00;
     transition-duration: 0s;
 }
-ul.nav3 li.this-page{
+nav ul li.external:hover > a::after, 
+nav ul li.external:focus > a::after{
+    content: " »";
+}
+nav ul li.this-page{
     background-color: #080;
 }
 
-ul.nav3 > li > ul{
+/*level 2 list*/
+nav > ul > li > ul{
     display: none;
     list-style-type: none;
     position: absolute;
@@ -320,7 +392,8 @@ ul.nav3 > li > ul{
     width: 180px;
 }
 
-ul.nav3 > li > ul > li{
+/*level 2 list item*/
+nav > ul > li > ul > li{
     position: relative;
     color: white;    
     padding: 8px 0;
@@ -331,28 +404,30 @@ ul.nav3 > li > ul > li{
     width: 100%;
 }
 
-ul.nav3 > li > ul li.external {
+nav > ul > li > ul li.external {
     background-color: #800;
 }
-ul.nav3 > li > ul li.external:hover {
+nav > ul > li > ul li.external:hover {
     background-color: #f00;
     transition-duration: 0s;
 }
-ul.nav3 > li > ul li.internal {
+nav > ul > li > ul li.internal {
     background-color: #040;
 }
-ul.nav3 > li > ul li.internal:hover {
+
+nav > ul > li > ul li.internal:hover {
     background-color: #080;
     transition-duration: 0s;
 }
 
-ul.nav3 li:hover > ul, ul.nav3 li:focus > ul {
+nav ul li:hover > ul, 
+nav ul li:focus > ul {
     display: block;
 }
         
-ul.nav3 > li > ul > li > ul{
+nav > ul > li > ul > li > ul{
     list-style-type: none;
-    min-width: 160px;
+    width: 180px;
     position: absolute;
     display: none;
     left: 100%;
@@ -360,6 +435,25 @@ ul.nav3 > li > ul > li > ul{
     padding: 0;
 }
 
-ul.nav3 > li > ul > li > ul > li{
+nav > ul > li > ul > li > ul > li{
     width: 100%;
+}
+
+li.end {
+    width: 100%;
+    height: 4px;
+    padding: 0 4px !important;
+}
+
+li.external > ul > li.end{
+    background-color: Red;
+}
+
+li.internal > ul > li.end, 
+li.this-page > ul > li.end{
+    background-color: #080 !important;
+}
+
+#endbar{
+    display: none;
 }
