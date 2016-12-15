@@ -2,14 +2,17 @@ html {
     font-family: 'Segoe UI', Segoe, sans-serif;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
     background-image: url("thecaterpillar1.5.jpg");
     background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
-
-    color:#888;
+    color: #888;
     font-size: medium;
     max-width: 800px;
     margin: auto;
@@ -271,15 +274,16 @@ ul.nav3 {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    background-color: rgba(0, 128, 0, 0.50);
-    height: 37px;
+    height: fit-content;
+
 }
-ul.nav3 > li {
+
+ul.nav3 li {
     position: relative;
     float: left;
-}
-ul.nav3 > li > a{
-    padding: 8px 16px;
+    background-color: rgba(0, 128, 0, 0.50); 
+    padding: 8px 0;
+    text-indent: 0;
     display: inline-block;  
     color: white;
     text-align: center;
@@ -287,15 +291,19 @@ ul.nav3 > li > a{
     transition-duration: 0.5s;
 }
 
-ul.nav3 li:hover > a.internal, ul.nav3 li:focus > a.internal{
+ul.nav3 li a{
+    padding: 8px 16px;
+}
+
+ul.nav3 li.internal:hover, ul.nav3 li.internal:focus{
     background-color: #080;
     transition-duration: 0s;
 }
-ul.nav3 li:hover > a.external, ul.nav3 li:focus > a.external{
+ul.nav3 li.external:hover, ul.nav3 li.external:focus{
     background-color: #f00;
     transition-duration: 0s;
 }
-ul.nav3 li > a.this-page{
+ul.nav3 li.this-page{
     background-color: #080;
 }
 
@@ -307,41 +315,41 @@ ul.nav3 > li > ul{
     top: 100%;
     padding: 0;
     text-align: left;
-    min-width: 160px;
     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
     z-index: 1;
+    width: 180px;
 }
 
 ul.nav3 > li > ul > li{
     position: relative;
-}
-
-ul.nav3 > li > ul a{
     color: white;    
-    padding: 8px 16px;
+    padding: 8px 0;
     text-decoration: none;
     display: block !important;
     text-align: left !important;
-    transition-duration: 0.5s;    
+    transition-duration: 0.5s; 
+    width: 100%;
 }
-ul.nav3 > li > ul a.external {
+
+ul.nav3 > li > ul li.external {
     background-color: #800;
 }
-ul.nav3 > li > ul a.external:hover {
+ul.nav3 > li > ul li.external:hover {
     background-color: #f00;
     transition-duration: 0s;
 }
-ul.nav3 > li > ul a.internal {
+ul.nav3 > li > ul li.internal {
     background-color: #040;
 }
-ul.nav3 > li > ul a.internal:hover {
+ul.nav3 > li > ul li.internal:hover {
     background-color: #080;
     transition-duration: 0s;
 }
 
 ul.nav3 li:hover > ul, ul.nav3 li:focus > ul {
     display: block;
-}        
+}
+        
 ul.nav3 > li > ul > li > ul{
     list-style-type: none;
     min-width: 160px;
@@ -350,4 +358,8 @@ ul.nav3 > li > ul > li > ul{
     left: 100%;
     top: 0;
     padding: 0;
+}
+
+ul.nav3 > li > ul > li > ul > li{
+    width: 100%;
 }
