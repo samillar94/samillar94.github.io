@@ -22,20 +22,20 @@
         <ul>
             <li class="internal"><a href="index.html">Home</a></li>
             <!--<li><a href="mothindex.html" class="internal">Moth index</a></li>-->
-            <li class="this-page">
+            <li class="this-page" id="button">
                 <a href="javascript:void(0)">Sandbox</a>
-                <ul>
+                <ul id="shy">
                     <li class="internal"><a href="sandbox.html#basics">Basic stuff</a></li>
                     <li class="internal"><a href="sandbox.html#heads">Headers etc.</a></li>
                     <li class="internal"><a href="sandbox.html#boxes">Fancy boxes</a></li><li class="end"></li>
                 </ul>
                 
             </li>
-            <li class="internal"><a href="javascript:void(0)">My stuff</a>
-                <ul>
+            <li class="internal" id="button2"><a href="javascript:void(0)">My stuff</a>
+                <ul id="shy2">
                     <li class="external"><a href="https://millar153.wordpress.com/" target="_blank">The Caterpillar</a></li>
-                    <li class="external"><a href="http://angleshades.blogspot.co.uk/" target="_blank">meticulosa</a>
-                        <ul>
+                    <li class="external" id="button3"><a href="http://angleshades.blogspot.co.uk/" target="_blank">meticulosa</a>
+                        <ul id="shy3">
                             <li class="external"><a href="http://angleshades.blogspot.co.uk/p/butterflies-order-1st-record-vernacular.html" target="_blank">Garden moth list</a>
                             <li class="external"><a href="http://angleshades.blogspot.co.uk/p/projects.html" target="_blank">Rearing projects</a></li><li class="end"></li></ul>
                         
@@ -53,7 +53,50 @@
             </li>
             <li class="end" id="endbar"></li>
         </ul>
-    </nav>  
+    </nav> 
+    <script id="sticky">
+        if (matchMedia('only screen and (max-width: 500px)').matches) {
+
+            var button = document.getElementById('button'); // Assumes element with id='button'
+
+            button.onclick = function () {
+                var div = document.getElementById('shy');
+                if (div.style.display !== 'none') {
+                    div.style.display = 'none';
+                }
+                else {
+                    div.style.display = 'block';
+                    button.style.background = '#080';
+                }
+            };
+
+            var button2 = document.getElementById('button2'); // Assumes element with id='button'
+
+            button2.onclick = function () {
+                var div2 = document.getElementById('shy2');
+                if (div2.style.display !== 'none') {
+                    div2.style.display = 'none';
+                }
+                else {
+                    div2.style.display = 'block';
+                    button2.style.background = '#080';
+                }
+            };
+
+            var button3 = document.getElementById('button3'); // Assumes element with id='button'
+
+            button3.onclick = function () {
+                var div3 = document.getElementById('shy3');
+                if (div3.style.display !== 'none') {
+                    div3.style.display = 'none';
+                }
+                else {
+                    div3.style.display = 'block';
+                    button3.style.background = '#f00';
+                }
+            };
+        }
+    </script> 
     <p class="greeting">I'm learning web design, starting with HTML, CSS and Javascript. This is where I test things out.</p>
     <div class="icon"></div>
     
