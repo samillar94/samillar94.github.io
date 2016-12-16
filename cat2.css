@@ -147,11 +147,6 @@ ol.d {
     text-align: center;
     }
 
-@media only screen and (min-width: 500px) {
-    [href="javascript:void(0)"] {
-        cursor: context-menu;
-    }
-}
 a.inline-internal:link, a.inline-internal:visited {
     color: rgb(167, 255, 160);
 }
@@ -335,12 +330,11 @@ nav li {
     transition-duration: 0.5s;
 }
 nav li.internal:hover, 
-nav li.internal:focus {
+nav li.this-page:hover {
     background-color: #080;
     transition-duration: 0s;
 }
-nav li.external:hover, 
-nav li.external:focus {
+nav li.external:hover {
     background-color: #f00;
     transition-duration: 0s;
 }
@@ -349,10 +343,8 @@ nav li.end {
     height: 4px;
 }
 /*level 1 list item*/
+nav > ul > li.internal, 
 nav > ul > li.this-page {
-    background-color: #080;
-}
-nav > ul > li.internal {
     background-color: rgba(0, 128, 0, 0.50);
 }
 nav > ul > li.external {
@@ -386,10 +378,20 @@ nav a {
     padding: 8px 16px;
     /*background-color: rgba(256,256,0,0.2)*/
 }
-nav li.external:hover > a::after, 
-nav li.external:focus > a::after {
+nav li.external > a:not([href="javascript:void(0)"])::after{
     content: " »";
 }
+@media only screen and (max-width: 500px) {
+    a[href="javascript:void(0)"]::after {
+        content: " ▼";
+        font-size: x-small;
+    }  
+}
+/*level 1 link*/
+nav > ul > li.this-page > a{
+    font-weight: 700;
+}
+
 
 @media only screen and (min-width:500px) {
     nav {
@@ -451,6 +453,15 @@ nav li.external:focus > a::after {
     nav ul ul a {
         display: inline-block;
         width: 100%; 
+    }
+    nav [href="javascript:void(0)"] {
+        cursor: context-menu;
+    }
+    nav li.external > a:not([href="javascript:void(0)"])::after{
+        content: "";
+    }
+    nav li.external:hover > a:not([href="javascript:void(0)"])::after{
+        content: " »";
     }
 
 
