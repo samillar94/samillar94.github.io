@@ -1,0 +1,19 @@
+body {
+}
+
+nav li.external > a:not([href="javascript:void(0)"])::after{
+    content: " »";
+}
+
+a[href="javascript:void(0)"]::after {
+    content: " ▼";
+    font-size: x-small;
+}  
+
+@media only screen and (min-width: 500px){
+nav > ul > li > ul > li > a[href="javascript:void(0)"]::after {
+        content: " ⯈";
+        font-size: x-small;
+    } 
+}
+

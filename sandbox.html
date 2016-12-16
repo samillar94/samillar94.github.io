@@ -50,13 +50,25 @@
                 
             </div>
             </li>  
-            <li class="external" style="width: fill-available"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wikipedia page</a>
+            <li class="external"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wikipedia page</a>
             </li>
-            <li class="end" id="endbar">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</li>
+            <li class="end" id="endbar">&emsp;</li>
         </ul>
     </nav> 
     <script id="sticky">
-        if (matchMedia('only screen and (max-width: 500px)').matches) {
+        if (matchMedia('only screen and (max-width: 500px)').matches || Modernizr.touch) {
+
+            var cssId = 'touchstyle';  // you could encode the css path itself to generate id..
+            if (!document.getElementById(cssId)) {
+                var head = document.getElementsByTagName('head')[0];
+                var link = document.createElement('link');
+                link.id = cssId;
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'touchstyle.css';
+                link.media = 'all';
+                head.appendChild(link);
+            };
 
             var button = document.getElementById('button'); // Assumes element with id='button'
 
@@ -64,7 +76,6 @@
                 var div = document.getElementById('shy');
                 if (div.style.display !== 'block') {
                     div.style.display = 'block';
-                    li.style.background = '#080';
                 }
                 else {
                     div.style.display = 'none';
@@ -81,6 +92,7 @@
                 }
                 else {
                     div2.style.display = 'none';
+                    li2.style.background = 'rgba(256,0,0,0.5)';
                 }
             };
 
@@ -94,6 +106,7 @@
                 }
                 else {
                     div3.style.display = 'none';
+                    li3.style.background = '#800';
                 }
             };
         }
