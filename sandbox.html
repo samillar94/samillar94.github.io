@@ -22,8 +22,8 @@
         <ul>
             <li class="internal"><a href="index.html">Home</a></li>
             <!--<li><a href="mothindex.html" class="internal">Moth index</a></li>-->
-            <li class="this-page" id="button">
-                <a href="javascript:void(0)">Sandbox</a>
+            <li class="this-page" id="li">
+                <a href="javascript:void(0)" id="button">Sandbox</a>
                 <ul id="shy">
                     <li class="internal"><a href="sandbox.html#basics">Basic stuff</a></li>
                     <li class="internal"><a href="sandbox.html#heads">Headers etc.</a></li>
@@ -31,10 +31,10 @@
                 </ul>
                 
             </li>
-            <li class="internal"><a href="javascript:void(0)" id="button2">My stuff</a>
+            <li class="internal" id="li2"><a href="javascript:void(0)" id="button2">My stuff</a>
                 <ul id="shy2">
                     <li class="external"><a href="https://millar153.wordpress.com/" target="_blank">The Caterpillar</a></li>
-                    <li class="external"><a href="javascript:void(0)" target="_blank" id="button3">meticulosa</a>
+                    <li class="external" id="li3"><a href="javascript:void(0)" target="_blank" id="button3">meticulosa</a>
                         <ul id="shy3">
                             <li class="external"><a href="http://angleshades.blogspot.co.uk" target="_blank">Posts</a>
                             <li class="external"><a href="http://angleshades.blogspot.co.uk/p/butterflies-order-1st-record-vernacular.html" target="_blank">Garden moth list</a>
@@ -62,12 +62,12 @@
 
             button.onclick = function () {
                 var div = document.getElementById('shy');
-                if (div.style.display !== 'none') {
-                    div.style.display = 'none';
+                if (div.style.display !== 'block') {
+                    div.style.display = 'block';
+                    li.style.background = '#080';
                 }
                 else {
-                    div.style.display = 'block';
-                    button.style.background = '#080';
+                    div.style.display = 'none';
                 }
             };
 
@@ -75,12 +75,12 @@
 
             button2.onclick = function () {
                 var div2 = document.getElementById('shy2');
-                if (div2.style.display !== 'none') {
-                    div2.style.display = 'none';
+                if (div2.style.display !== 'block') {
+                    div2.style.display = 'block';
+                    li2.style.background = '#080';
                 }
                 else {
-                    div2.style.display = 'block';
-                    button2.style.background = '#080';
+                    div2.style.display = 'none';
                 }
             };
 
@@ -88,12 +88,12 @@
 
             button3.onclick = function () {
                 var div3 = document.getElementById('shy3');
-                if (div3.style.display !== 'none') {
-                    div3.style.display = 'none';
+                if (div3.style.display !== 'block') {
+                    div3.style.display = 'block';
+                    li3.style.background = '#f00';
                 }
                 else {
-                    div3.style.display = 'block';
-                    button3.style.background = '#f00';
+                    div3.style.display = 'none';
                 }
             };
         }
