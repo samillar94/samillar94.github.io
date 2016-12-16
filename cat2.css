@@ -233,7 +233,7 @@ a.caterpillar:hover::after {
 
 a.meticulosa:hover {
     background-image: linear-gradient(red 0%, red 100%), url(anshablog180.jpg);
-    padding-bottom: 66px;
+    padding-bottom: 108px;
 }
 
 a.meticulosa:hover::after {
@@ -269,7 +269,7 @@ a.checklist:hover::after {
 
 a.periodic:hover {
     background-image: linear-gradient(red 0%, red 100%), url(petab-head-360.jpg);
-    padding-bottom: 108px;
+    padding-bottom: 129px;
 }
 
 a.periodic:hover::before {
@@ -309,6 +309,7 @@ nav ul {
     margin: auto;
     padding: 0;
     width: 100%;
+    /*overflow: hidden;*/
 }
 /*level 2-3 lists*/
 nav ul ul {
@@ -316,6 +317,10 @@ nav ul ul {
     top: 0;
     left: 0;
     display: none;
+}
+nav li:hover > ul, 
+nav li:focus > ul {
+    display: block !important;
 }
 
 /*level 1-3 list items*/
@@ -331,11 +336,11 @@ nav li {
 }
 nav li.internal:hover, 
 nav li.this-page:hover {
-    background-color: #080;
+    background-color: #080 !important;
     transition-duration: 0s;
 }
 nav li.external:hover {
-    background-color: #f00;
+    background-color: #f00 !important;
     transition-duration: 0s;
 }
 nav li.end {
@@ -343,10 +348,11 @@ nav li.end {
     height: 4px;
 }
 /*level 1 list item*/
-nav > ul > li.this-page {
+/*nav > ul > li.this-page {
     background-color: #080
-}
-nav > ul > li.internal {
+}*/
+nav > ul > li.internal,
+nav > ul > li.this-page {
     background-color: rgba(0, 128, 0, 0.50);
 }
 nav > ul > li.external {
@@ -357,6 +363,8 @@ nav > ul > #endbar {
     padding: 0;
     background-color: rgba(0, 128, 0, 0.50);
     margin-bottom: 19px;
+    overflow: hidden;
+    transition-duration: 0s;
 }
 /*level 2-3 list items*/
 nav li li.internal {
@@ -386,7 +394,7 @@ nav > ul > li.this-page > a{
 }
 
 
-@media only screen and (min-width:500px) {
+@media only screen and (min-width:570px) {
     nav {
         height: 37px;
     }
@@ -399,10 +407,6 @@ nav > ul > li.this-page > a{
         box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
         z-index: 1;
         width: 180px;
-    }
-    nav li:hover > ul, 
-    nav li:focus > ul {
-        display: block;
     }
     /*level 2 list*/ 
     nav > ul > li > ul {
@@ -425,10 +429,10 @@ nav > ul > li.this-page > a{
         padding: 0;
     }
     nav > ul > #endbar {
-        display: none; /*Tweak this*/
+        display: inline-block; 
         height: 37px;
-        width: auto;
-        overflow: hidden;
+        width: 0;
+        /*width: calc(100% - 467.37px); /*only displays right in Chrome*/
     }
     /*level 2-3 list items*/
     nav li li {
@@ -447,12 +451,31 @@ nav > ul > li.this-page > a{
         content: "";
     }
     nav li.external:hover > a:not([href="javascript:void(0)"])::after{
-        content: " »";
+        content: " »" !important;
     }
+    /*level 1 links*/
+    nav > ul > li:hover > a[href="javascript:void(0)"]::after {
+        content: " ▼";
+        font-size: x-small;
+    }  
     /*level 2-3 links*/
     nav ul ul a {
         width: 100%; 
     }
+    nav > ul > li > ul > li:hover > a[href="javascript:void(0)"]::after {
+        content: " ⯈";
+        font-size: x-small;
+    } 
+}
 
 
+@media only screen and (max-width: 570px) {
+    nav li.external > a:not([href="javascript:void(0)"])::after {
+        content: " »";
+    }
+
+    a[href="javascript:void(0)"]::after {
+        content: " ▼";
+        font-size: x-small;
+    }  
 }

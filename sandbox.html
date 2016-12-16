@@ -12,6 +12,7 @@
 </head>
   
 <body>
+
     <div class="head">
         <img src="bemidimg1600.jpg" alt="Beech Midget">
         <div class="head-text">
@@ -23,7 +24,7 @@
             <li class="internal"><a href="index.html">Home</a></li>
             <!--<li><a href="mothindex.html" class="internal">Moth index</a></li>-->
             <li class="this-page" id="li">
-                <a href="javascript:void(0)" id="button">Sandbox</a>
+                <a href="javascript:void(0)" id="button">Sandbox<span style="font-size: x-small" id="drop"></span></a>
                 <ul id="shy">
                     <li class="internal"><a href="sandbox.html#basics">Basic stuff</a></li>
                     <li class="internal"><a href="sandbox.html#heads">Headers etc.</a></li>
@@ -34,7 +35,7 @@
             <li class="external" id="li2"><a href="javascript:void(0)" id="button2">My stuff</a>
                 <ul id="shy2">
                     <li class="external"><a href="https://millar153.wordpress.com/" target="_blank">The Caterpillar</a></li>
-                    <li class="external" id="li3"><a href="javascript:void(0)" target="_blank" id="button3">meticulosa</a>
+                    <li class="external" id="li3"><a href="javascript:void(0)" id="button3">meticulosa</a>
                         <ul id="shy3">
                             <li class="external"><a href="http://angleshades.blogspot.co.uk" target="_blank">Posts</a>
                             <li class="external"><a href="http://angleshades.blogspot.co.uk/p/butterflies-order-1st-record-vernacular.html" target="_blank">Garden moth list</a>
@@ -52,65 +53,9 @@
             </li>  
             <li class="external"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wikipedia page</a>
             </li>
-            <li class="end" id="endbar">&emsp;</li>
+            <li class="end" id="endbar"></li>
         </ul>
     </nav> 
-    <script id="sticky">
-        if (matchMedia('only screen and (max-width: 500px)').matches || Modernizr.touch) {
-
-            var cssId = 'touchstyle';  // you could encode the css path itself to generate id..
-            if (!document.getElementById(cssId)) {
-                var head = document.getElementsByTagName('head')[0];
-                var link = document.createElement('link');
-                link.id = cssId;
-                link.rel = 'stylesheet';
-                link.type = 'text/css';
-                link.href = 'touchstyle.css';
-                link.media = 'all';
-                head.appendChild(link);
-            };
-
-            var button = document.getElementById('button'); // Assumes element with id='button'
-
-            button.onclick = function () {
-                var div = document.getElementById('shy');
-                if (div.style.display !== 'block') {
-                    div.style.display = 'block';
-                }
-                else {
-                    div.style.display = 'none';
-                }
-            };
-
-            var button2 = document.getElementById('button2'); // Assumes element with id='button'
-
-            button2.onclick = function () {
-                var div2 = document.getElementById('shy2');
-                if (div2.style.display !== 'block') {
-                    div2.style.display = 'block';
-                    li2.style.background = '#f00';
-                }
-                else {
-                    div2.style.display = 'none';
-                    li2.style.background = 'rgba(256,0,0,0.5)';
-                }
-            };
-
-            var button3 = document.getElementById('button3'); // Assumes element with id='button'
-
-            button3.onclick = function () {
-                var div3 = document.getElementById('shy3');
-                if (div3.style.display !== 'block') {
-                    div3.style.display = 'block';
-                    li3.style.background = '#f00';
-                }
-                else {
-                    div3.style.display = 'none';
-                    li3.style.background = '#800';
-                }
-            };
-        }
-    </script> 
     <p class="greeting">I'm learning web design, starting with HTML, CSS and Javascript. This is where I test things out.</p>
     <div class="icon"></div>
     
@@ -133,7 +78,7 @@
             <li>List item</li>
             <li>List item</li>
         </ul>    
-        button: <button type="button" onclick="document.getElementById('mothname').innerHTML = 'Nematopogon metaxella'">Click Me!</button>
+        button: <button type="button"><!--onclick="document.getElementById('mothname').innerHTML = 'Nematopogon metaxella'"-->Click Me!</button>
         <p class ="smcaps ita" id="mothname"><i >Phyllocnistis unipunctella</i></p>
     </div>
     <br>
@@ -207,3 +152,65 @@
     
 </body>
 </html>
+
+<script>
+
+    var anchor = document.getElementById('button'); // Assumes element with id='button'
+    var dropchar = document.getElementById('drop');
+    var div = document.getElementById('shy');
+
+    anchor.onclick = function () {
+
+        if (div.style.display !== 'block') {
+            div.style.display = 'block';
+            li.style.background = '#080';
+            //dropchar.innerHTML = " ▼";
+        }
+        else {
+            div.style.display = 'none';
+            li.style.background = 'rgba(0,128,0,0.5)'
+            //dropchar.innerHTML = "";
+        };
+        /*if (div.style.display == 'block') {
+            dropchar.innerHTML = " ▼ beeatch";
+        }
+        else {
+            dropchar.innerHTML = "";
+        }*/
+    }
+
+
+
+
+    //anchor.onmouseover = dropchar.innerHTML = " ▼ bitches";
+
+
+    var button2 = document.getElementById('button2'); // Assumes element with id='button'
+
+    button2.onclick = function () {
+        var div2 = document.getElementById('shy2');
+        if (div2.style.display !== 'block') {
+            div2.style.display = 'block';
+            li2.style.background = '#f00';
+        }
+        else {
+            div2.style.display = 'none';
+            li2.style.background = 'rgba(256,0,0,0.5)';
+        }
+    }
+
+    var button3 = document.getElementById('button3'); // Assumes element with id='button'
+
+    button3.onclick = function () {
+        var div3 = document.getElementById('shy3');
+        if (div3.style.display !== 'block') {
+            div3.style.display = 'block';
+            li3.style.background = '#f00';
+        }
+        else {
+            div3.style.display = 'none';
+            li3.style.background = '#800';
+        }
+    }
+
+</script> 
