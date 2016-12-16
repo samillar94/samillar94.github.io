@@ -53,13 +53,13 @@ h1 {
     color: #000;
     margin-bottom: 5px;
     font-family: 'Segoe UI', sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     text-shadow: 0 0 10px white;
 }
 
-@media only screen and (max-width: 370px){
+@media only screen and (min-width: 370px){
     h1 {
-        font-size: 24px;
+        font-size: 36px;
     }
 }
 
@@ -215,11 +215,12 @@ a.block-external:link, a.block-external:visited{
 
 a.block-external:hover {
     background-color: red;
+    box-shadow: 0 0 5px white;
 }
 
 a.block-external:hover::after, a.block-external:hover::before{
     font-variant: small-caps;
-    font-stretch:  semi-condensed;
+    font-stretch: condensed;
 }
 
 a.caterpillar:hover {
@@ -237,7 +238,7 @@ a.meticulosa:hover {
 }
 
 a.meticulosa:hover::after {
-    content: "moth recording blog";
+    content: "moth blog";
 }
 
 a.flickr:hover {
@@ -245,8 +246,8 @@ a.flickr:hover {
     padding-bottom: 108px;
 }
 
-a.flickr:hover::before {
-    content: "flickr      ";
+a.flickr:hover::after {
+    content: "      photostream";
 }
 
 a.youtube:hover {
@@ -254,8 +255,8 @@ a.youtube:hover {
     padding-bottom: 108px;
 }
 
-a.youtube:hover::before {
-    content: "youtube      ";
+a.youtube:hover::after {
+    content: "      channel";
 }
 
 a.checklist:hover {
@@ -273,7 +274,7 @@ a.periodic:hover {
 }
 
 a.periodic:hover::before {
-    content: "customisable ";
+    content: "";
 }
 
 a.geronimo:hover {
@@ -297,164 +298,156 @@ a.geronimo:hover::after {
     transition-duration: 0s;
 }
 
-@media only screen and (max-width:500px){
-    nav {
-        height: 0 !important;
-    }
-
-    nav ul > li {
-        background-color: rgba(0, 128, 0, 0.50);    
-    }
-
-    nav ul li {
-        width: 100%;
-        display: inline-block;
-        text-align: left;
-        padding-left: 4px !important;
-    }
-
-    nav ul ul {
-        position: relative !important;
-        top: 8px !important;
-        left: 0 !important;
-        width: 100% !important;
-        display: inline-block;
-    }
-
-    #endbar {
-        display: inline-block;
-    }
-}
-
+/****MOBILE FIRST NAV BAR****/
 nav {
-    height: 37px;
+    height: 0;
     background-color: rgba(0, 128, 0, 0.50); 
 }
 
+/*level 1-3 list*/
 nav ul {
     list-style-type: none;
     margin: auto;
     padding: 0;
+    width: 100%;
+}
+/*level 2-3 lists*/
+nav ul ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
 }
 
-nav ul li {
+/*level 1-3 list items*/
+nav li {
     position: relative;
     float: left;
-    padding: 8px 0;
     text-indent: 0;
-    display: inline-block;  
-    color: white;
+    width: 100%;
+    display: inline-block;
     text-align: left;
-    text-decoration: none;
+    padding: 0 4px;
     transition-duration: 0.5s;
 }
-
-nav > ul > li {
-    background-color: none !important;
-}
-nav ul ul li {
-    background-color: rgba(0, 128, 0, 0.50); 
-}
-
-nav ul li a{
-    display: block;
-    padding: 0 16px
-}
-
-nav ul li.internal:hover, 
-nav ul li.internal:focus{
+nav li.internal:hover, 
+nav li.internal:focus {
     background-color: #080;
     transition-duration: 0s;
 }
-nav ul li.external:hover, 
-nav ul li.external:focus{
+nav li.external:hover, 
+nav li.external:focus {
     background-color: #f00;
     transition-duration: 0s;
 }
-nav ul li.external:hover > a::after, 
-nav ul li.external:focus > a::after{
-    content: " »";
-}
-nav ul li.this-page{
-    background-color: #080;
-}
-
-/*level 2 list*/
-nav > ul > li > ul{
-    display: none;
-    list-style-type: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    padding: 0;
-    text-align: left;
-    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
-    z-index: 1;
-    width: 180px;
-}
-
-/*level 2 list item*/
-nav > ul > li > ul > li{
-    position: relative;
-    color: white;    
-    padding: 8px 0;
-    text-decoration: none;
-    display: block !important;
-    text-align: left !important;
-    transition-duration: 0.5s; 
-    width: 100%;
-}
-
-nav > ul > li > ul li.external {
-    background-color: #800;
-}
-nav > ul > li > ul li.external:hover {
-    background-color: #f00;
-    transition-duration: 0s;
-}
-nav > ul > li > ul li.internal {
-    background-color: #040;
-}
-
-nav > ul > li > ul li.internal:hover {
-    background-color: #080;
-    transition-duration: 0s;
-}
-
-nav ul li:hover > ul, 
-nav ul li:focus > ul {
-    display: block;
-}
-        
-nav > ul > li > ul > li > ul{
-    list-style-type: none;
-    width: 180px;
-    position: absolute;
-    display: none;
-    left: 100%;
-    top: 0;
-    padding: 0;
-}
-
-nav > ul > li > ul > li > ul > li{
-    width: 100%;
-}
-
-li.end {
+nav li.end {
     width: 100%;
     height: 4px;
-    padding: 0 4px !important;
 }
-
-li.external > ul > li.end{
+/*level 1 list item*/
+nav > ul > li.this-page {
+    background-color: #080;
+}
+nav > ul > li.internal {
+    background-color: rgba(0, 128, 0, 0.50);
+}
+nav > ul > li.external {
+    background-color: rgba(256,0,0,0.5)
+}
+nav > ul > #endbar {
+    height: 4px;
+    padding: 0;
+    background-color: rgba(0, 128, 0, 0.50);
+    margin-bottom: 19px;
+}
+/*level 2-3 list items*/
+nav li li.internal {
+    background-color: #040;
+}
+nav li li.external {
+    background-color: #800;
+}
+nav li.external > ul > li.end{
     background-color: Red;
 }
-
-li.internal > ul > li.end, 
-li.this-page > ul > li.end{
+nav li.internal > ul > li.end, 
+nav li.this-page > ul > li.end{
     background-color: #080 !important;
 }
 
-#endbar{
-    display: none;
+/*level 1-3 links*/
+nav a {
+    display: block;
+    width: 80%;
+    padding: 8px 16px;
+    /*background-color: rgba(256,256,0,0.2)*/
+}
+nav li.external:hover > a::after, 
+nav li.external:focus > a::after {
+    content: " »";
+}
+
+@media only screen and (min-width:500px) {
+    nav {
+        height: 37px;
+    }
+
+    /*level 2-3 lists*/ 
+    nav ul ul {
+        display: none;
+        position: absolute;
+        text-align: left;
+        box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+        z-index: 1;
+        width: 180px;
+    }
+    nav li:hover > ul, 
+    nav li:focus > ul {
+        display: block;
+    }
+    /*level 2 list*/ 
+    nav > ul > li > ul {
+        left: 0;
+        top: 100%;
+    }
+    /*level 3+ lists*/ 
+    nav ul ul ul {
+        left: 100%;
+        top: 0;
+    }
+
+    /*level 1-3 list items*/ 
+    nav ul li {
+        padding: 8px 0;
+    }
+    /*level 1 list item*/
+    nav > ul > li {
+        width: auto;
+    }
+    nav > ul > li.internal,
+    nav > ul > li.external {
+        background: none;
+    }
+    nav > ul > #endbar {
+        display: none; /*Tweak this*/
+        height: 37px;
+        width: auto;
+        overflow: hidden;
+    }
+    /*level 2-3 list items*/
+    nav li li {
+        display: block;
+        padding: 0;
+    }
+
+    /*level 1-3 links*/
+    nav a {
+        display: inline;
+    }
+    nav ul ul a {
+        display: inline-block;
+        width: 100%; 
+    }
+
+
 }
