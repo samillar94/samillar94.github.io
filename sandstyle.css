@@ -1,4 +1,6 @@
-
+p, div {
+    /*background-color: rgba(200,200,200,0.2)*/
+}
 
 .feature1 {
     background-color: #002;
@@ -10,7 +12,7 @@
 }   
 .feature2 {
     max-width: 500px;
-    min-width:  100px;
+    min-width: 100px;
     margin: auto;
     background-color: #001;
     text-align: center;
@@ -36,28 +38,31 @@ h6 {
     margin: auto;
 }   
      
-div.relative {
+#relative {
     position: relative;
     max-width: 400px;
     height: 200px;
     background-color: #f00;
     margin: auto;
+    border-radius: 25px;
 } 
-div.absolute {
+#absolute {
     position: absolute;
     background-color: #d00;
-    top: 10px;
-    left: 10px;
+    top: 0px;
+    left: 0px;
     width: 200px;
     height: 100px;
+    border-radius: 25px;
 }
-div.absolute2 {
+#absolute2 {
     position: absolute;
-    background-color: #b00;
-    top: 30px;
-    left: 10px;
+    background-color: white;
+    top: 0px;
+    left: 0px;
     width: 50px;
     height: 50px;
+    border-radius: 25px;
 }  
 div.yscroll {
     background-color: #eee;
@@ -161,3 +166,85 @@ div.menu1:hover div.drop1, div.drop1:hover{
     background-color: #f00;
 }
         
+a.block-external-2:link, a.block-external-2:visited{
+    background-color:  rgba(255, 0, 0, 0.5);
+    background-image: none;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+    text-shadow: 0 0 5px 0 black;
+    padding: 10px 25px; 
+    margin: 1px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    transition-duration: 0.5s;
+}
+
+a.block-external-2:hover {
+    background-color: red;
+    box-shadow: 0 0 5px white;
+}
+
+a.block-external-2:hover::after, a.block-external-2:hover::before{
+    font-variant: small-caps;
+    font-stretch: condensed;
+}
+
+a.caterpillar-2:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(rutigblog180.jpg);
+}
+
+a.caterpillar-2:hover::after {
+    content: "blog";
+}
+
+a.meticulosa-2:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(anshablog180.jpg);
+}
+
+a.meticulosa-2:hover::after {
+    content: "moth blog";
+}
+
+a.flickr-2:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(lycle-head-360.jpg);
+}
+
+a.flickr-2:hover::after {
+    content: "      photostream";
+}
+
+a.youtube-2:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(grayl-head-360.jpg);
+}
+
+a.youtube-2:hover::after {
+    content: "                    channel";
+}
+
+a.checklist-2:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(eucam-head-360.jpg);
+}
+
+a.checklist-2:hover::after {
+    content: "micro-moth county distributions";
+}
+
+a.periodic-2:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(petab-head-360.jpg);
+}
+
+a.periodic-2:hover::before {
+    content: "";
+}
+
+a.geronimo-2:hover {
+    background-image: linear-gradient(red 0%, red 100%), url(geron-head-360.jpg);
+}
+
+a.geronimo-2:hover::after {
+    content: "       doctor who theme - original arrangement";
+}
+

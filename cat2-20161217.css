@@ -7,18 +7,12 @@ html {
 }
 
 body {
-    background-color: black;
-    color: #888;    
+    background: black url("thecaterpillar1.5.jpg") repeat fixed center;
+    color: #888;
     font-size: medium;
     max-width: 800px;
     margin: auto;
     text-align: center;   
-}
-body.showcase {
-    background: black url("thecaterpillar1.5.jpg") repeat fixed center;
-}
-body.profile {
-    background: linear-gradient(to bottom, #001 0%, #002 90%);
 }
 
 p, a, h2, h3, h4, h5, h6, ul, ol {
@@ -35,16 +29,6 @@ p, a, h2, h3, h4, h5, h6, ul, ol {
 
 .poem{
     font-size: smaller;
-}
-
-.alert{
-    text-align: left;
-    padding: 16px;
-    background-color: rgba(256,256,0,0.5);
-    border: 1px solid yellow;
-    color: black;
-    font-weight: 600;
-    text-shadow: none;
 }
 
 div.head {
@@ -65,15 +49,11 @@ div.head-text {
 }
 
 h1 {
-    color: #fff;
+    color: #000;
     margin-bottom: 5px;
     font-family: 'Segoe UI', sans-serif;
     font-size: 24px;
     text-shadow: 0 0 10px white;
-}
-
-h1.black{
-    color: #000;
 }
 
 @media only screen and (min-width: 370px){
@@ -82,14 +62,7 @@ h1.black{
     }
 }
 
-p.sub-white {    
-    color: #fff;
-    text-shadow: 0 0 10px #fff;
-    margin-top: 0;
-    margin-bottom: 8px;
-}
-
-p.sub-black {
+p.sub {    
     color: #000;
     text-shadow: 0 0 10px #fff;
     margin-top: 0;
@@ -109,7 +82,7 @@ div.icon {
 }
 
 div.icon:hover{
-    box-shadow: 0 0 15px 5px white;    
+    box-shadow: 0 0 15px white;    
     background-image: url("favicon-200.jpg");
     transition-duration: 1s;
 }
@@ -178,36 +151,6 @@ ol.d {
 .center {
     text-align: center;
     }
-
-div.arrow{
-	width: 0; 
-	height: 0; 
-	font-size: 0;
-	line-height: 0;
-    display: inline-block;
-    vertical-align: top;
-    background: none;
-}
-div.arrow.down {
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-top: 10px solid red;
-}
-div.arrow.up {
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 10px solid yellow;
-}
-div.arrow.left {
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
-	border-right: 10px solid yellow;
-}
-div.arrow.right {
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
-	border-left: 10px solid yellow;
-}
 
 a.inline-internal:link, a.inline-internal:visited {
     color: rgb(167, 255, 160);
@@ -354,13 +297,6 @@ a.geronimo:hover::after {
     transition-duration: 0.5s; 
 }
 
-.gravatar.s120 {
-    height: 120px;
-    width: 120px;
-    border-radius: 20px;
-    transition-duration: 0.5s; 
-}
-
 .gravatar:hover {
     box-shadow: 0 0 5px white;
     transition-duration: 0s;
@@ -378,7 +314,6 @@ nav ul {
     margin: auto;
     padding: 0;
     width: 100%;
-    text-align: left;
     /*overflow: hidden;*/
 }
 /*level 2-3 lists*/
@@ -397,7 +332,6 @@ nav li:focus > ul {
 nav li {
     position: relative;
     float: left;
-    vertical-align: top;
     text-indent: 0;
     width: 100%;
     display: inline-block;
@@ -405,13 +339,8 @@ nav li {
     padding: 0 4px;
     transition-duration: 0.5s;
 }
-nav li.internal {
-    background-color: #040;
-}
-nav li.external {
-    background-color: #800;
-}
-nav li.internal:hover {
+nav li.internal:hover, 
+nav li.this-page:hover {
     background-color: #080 !important;
     transition-duration: 0s;
 }
@@ -420,32 +349,40 @@ nav li.external:hover {
     transition-duration: 0s;
 }
 nav li.end {
+    width: 100%;
     height: 4px;
 }
-nav li.section {
-    padding: 4px 0 0 16px; 
-    background-color: #080;
-    font-variant-caps: all-small-caps;
-}
-nav li.section::after {
-    content: ":";
-}
 /*level 1 list item*/
+/*nav > ul > li.this-page {
+    background-color: #080
+}*/
+nav > ul > li.internal,
 nav > ul > li.this-page {
-    /*background-color: #080*/
+    background-color: rgba(0, 128, 0, 0.50);
+}
+nav > ul > li.external {
+    background-color: rgba(256,0,0,0.5)
 }
 nav > ul > #endbar {
     height: 4px;
     padding: 0;
     background-color: rgba(0, 128, 0, 0.50);
     margin-bottom: 19px;
+    overflow: hidden;
     transition-duration: 0s;
 }
 /*level 2-3 list items*/
-nav li.external > ul > li.end{
-    background-color: #f00 !important;
+nav li li.internal {
+    background-color: #040;
 }
-nav li.internal > ul > li.end{
+nav li li.external {
+    background-color: #800;
+}
+nav li.external > ul > li.end{
+    background-color: Red;
+}
+nav li.internal > ul > li.end, 
+nav li.this-page > ul > li.end{
     background-color: #080 !important;
 }
 
@@ -456,15 +393,13 @@ nav a {
     padding: 8px 16px;
     /*background-color: rgba(256,256,0,0.2)*/
 }
-nav a span {
-}
 /*level 1 link*/
-nav > ul > li.this > a{
+nav > ul > li.this-page > a{
     font-weight: 700;
 }
 
 
-@media only screen and (min-width:385px) {
+@media only screen and (min-width:570px) {
     nav {
         height: 37px;
     }
@@ -472,6 +407,7 @@ nav > ul > li.this > a{
     /*level 2-3 lists*/ 
     nav ul ul {
         display: none;
+        position: absolute;
         text-align: left;
         box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
         z-index: 1;
@@ -479,21 +415,23 @@ nav > ul > li.this > a{
     }
     /*level 2 list*/ 
     nav > ul > li > ul {
-        position: absolute;
         left: 0;
         top: 100%;
     }
     /*level 3+ lists*/ 
     nav ul ul ul {
-        left: 0;
+        left: 100%;
         top: 0;
     }
 
+    /*level 1-3 list items*/ 
+    nav ul li {
+        padding: 8px 0;
+    }
     /*level 1 list item*/
     nav > ul > li {
         width: auto;
         padding: 0;
-        float: none;
     }
     nav > ul > #endbar {
         display: inline-block; 
@@ -521,32 +459,28 @@ nav > ul > li.this > a{
         content: " »" !important;
     }
     /*level 1 links*/
-    nav li:hover > a[href="javascript:void(0)"]::after {
-        /*content: " ▼";
-        font-size: x-small; */
-    }
+    nav > ul > li:hover > a[href="javascript:void(0)"]::after {
+        content: " ▼";
+        font-size: x-small;
+    }  
     /*level 2-3 links*/
     nav ul ul a {
         width: 100%; 
     }
     nav > ul > li > ul > li:hover > a[href="javascript:void(0)"]::after {
-        /*content: " ⯈";
-        font-size: x-small;*/
+        content: " ⯈";
+        font-size: x-small;
     } 
-    /*level 3 links*/
-    nav ul ul ul a {
-        text-indent: 8px;
-}
 }
 
 
-@media only screen and (max-width: 384px) {
+@media only screen and (max-width: 570px) {
     nav li.external > a:not([href="javascript:void(0)"])::after {
         content: " »";
     }
 
     a[href="javascript:void(0)"]::after {
-        /*content: " ▼";
-        font-size: x-small;*/ 
+        content: " ▼";
+        font-size: x-small;
     }  
 }
