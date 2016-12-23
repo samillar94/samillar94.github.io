@@ -101,3 +101,61 @@
         <p class="orig">Powered by <a class="inline-external" href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
     </body>
 </html>
+
+<script>
+
+    var listItems = Array.from(document.getElementsByClassName("hasdrop"));
+
+    var buttons = []
+    for (var x = 0; x < listItems.length; x++) { buttons.push(listItems[x].firstChild) }
+
+    var dropdowns = []
+    for (var y = 0; y < listItems.length; y++) { dropdowns.push(listItems[y].lastChild) }
+
+    var internalLinks = Array.from(document.getElementsByClassName("internal", "this-page"));
+    //alert(internalLinks.length)
+
+    var colorsOn = [];
+    var colorsOff = [];
+
+    buttons.forEach(
+
+        function logArrayElements(element, index, array) {
+
+            if (internalLinks.indexOf(listItems[index]) != -1) {
+                colorsOn[index] = '#080';
+                colorsOff[index] = '#040';
+            }
+            else {
+                colorsOn[index] = '#f00';
+                colorsOff[index] = '#800';
+            }
+
+            var dropdown = function () {
+
+                //console.log('a[' + index + '] = ' + element);
+
+                if (dropdowns[index].style.display !== 'block') {
+                    dropdowns[index].style.display = 'block';
+                    //alert(internalLinks.indexOf(listItems[index]));
+                    array[index].lastChild.innerHTML = " 📌";
+                    array[index].style.paddingRight = '8px';
+                    listItems[index].style.backgroundColor = colorsOn[index];
+                }
+                else {
+                    dropdowns[index].style.display = 'none';
+                    array[index].lastChild.innerHTML = "";
+                    array[index].style.paddingRight = '16px';
+                    listItems[index].style.background = colorsOff[index];
+                }; // end event listener function
+
+            };
+
+            element.addEventListener('click', dropdown);
+            //element.addEventListener('mouseover', dropdown)
+
+        } // end forEach callback
+
+    ); // end forEach
+
+</script>
