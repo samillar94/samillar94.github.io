@@ -67,7 +67,7 @@ div.head-text {
 h1 {
     color: #fff;
     margin-bottom: 5px;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Gill Sans MT Condensed', sans-serif;
     font-size: 24px;
     text-shadow: 0 0 10px white;
 }
@@ -427,7 +427,7 @@ nav li.end {
     height: 4px;
 }
 nav li.section {
-    padding: 4px 0 0 16px; 
+    padding: 2px 0px 2px 16px; 
     background-color: #080;
     font-variant-caps: all-small-caps;
 }
