@@ -2,6 +2,15 @@ html {
     font-family: 'Segoe UI', Segoe, sans-serif;
 }
 
+@font-face {
+    font-family: 'Gill Sans MT Condensed';
+    src: url('GILC____.TTF');
+/*  src: local('Graublau Web Regular'), local('Graublau Web'),
+    url("GraublauWeb.woff") format("woff"),
+    url("GraublauWeb.otf") format("opentype"),
+    url("GraublauWeb.svg#grablau") format("svg")*/;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -67,7 +76,7 @@ div.head-text {
 h1 {
     color: #fff;
     margin-bottom: 5px;
-    font-family: 'Gill Sans MT Condensed', sans-serif;
+    font-family: 'Gill Sans MT Condensed', 'Segoe UI', sans-serif;
     font-size: 24px;
     text-shadow: 0 0 10px white;
 }
@@ -284,7 +293,7 @@ a.block-external:hover {
 }
 
 a.block-external:hover::after, a.block-external:hover::before{
-    font-variant: small-caps;
+    font-size: small;
     font-stretch: condensed;
 }
 
@@ -312,7 +321,8 @@ a.flickr:hover {
 }
 
 a.flickr:hover::after {
-    content: "      photostream";
+    content: "\a butterfly and \amoth photos";
+    white-space: pre; /* or pre-wrap */
 }
 
 a.youtube:hover {
@@ -321,7 +331,8 @@ a.youtube:hover {
 }
 
 a.youtube:hover::after {
-    content: "      channel";
+    content: "\a title remixes &\a wildlife videos";
+    white-space: pre; /* or pre-wrap */
 }
 
 a.checklist:hover {
@@ -330,7 +341,7 @@ a.checklist:hover {
 }
 
 a.checklist:hover::after {
-    content: "micro-moth county distributions";
+    content: " micro-moth county lists";
 }
 
 a.periodic:hover {
@@ -339,7 +350,7 @@ a.periodic:hover {
 }
 
 a.periodic:hover::before {
-    content: "";
+    content: "Up-to-date customisable ";
 }
 
 a.geronimo:hover {
@@ -348,7 +359,7 @@ a.geronimo:hover {
 }
 
 a.geronimo:hover::after {
-    content: "       doctor who theme - original arrangement";
+    content: " Doctor Who theme cover album";
 }
 
 .gravatar {
