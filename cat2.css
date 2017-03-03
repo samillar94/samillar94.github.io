@@ -8,7 +8,7 @@ html {
 /*  src: local('Graublau Web Regular'), local('Graublau Web'),
     url("GraublauWeb.woff") format("woff"),
     url("GraublauWeb.otf") format("opentype"),
-    url("GraublauWeb.svg#grablau") format("svg")*/;
+    url("GraublauWeb.svg#grablau") format("svg");*/
 }
 
 *{
@@ -77,7 +77,7 @@ h1 {
     color: #fff;
     margin-bottom: 5px;
     font-family: 'Gill Sans MT Condensed', 'Segoe UI', sans-serif;
-    font-size: 24px;
+    font-size: 30px;
     text-shadow: 0 0 10px white;
 }
 
@@ -87,7 +87,7 @@ h1.black{
 
 @media only screen and (min-width: 370px){
     h1 {
-        font-size: 36px;
+        font-size: 48px;
     }
 }
 
