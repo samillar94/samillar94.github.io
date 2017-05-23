@@ -317,7 +317,7 @@ a.meticulosa:hover::after {
 
 a.flickr:hover {
     background-image: linear-gradient(red 0%, red 100%), url(lycle-head-360.jpg);
-    padding-bottom: 108px;
+    padding-bottom: 87px;
 }
 
 a.flickr:hover::after {
@@ -327,7 +327,7 @@ a.flickr:hover::after {
 
 a.youtube:hover {
     background-image: linear-gradient(red 0%, red 100%), url(grayl-head-360.jpg);
-    padding-bottom: 108px;
+    padding-bottom: 87px;
 }
 
 a.youtube:hover::after {
@@ -337,7 +337,7 @@ a.youtube:hover::after {
 
 a.checklist:hover {
     background-image: linear-gradient(red 0%, red 100%), url(eucam-head-360.jpg);
-    padding-bottom: 66px;
+    padding-bottom: 87px;
 }
 
 a.checklist:hover::after {
@@ -346,20 +346,20 @@ a.checklist:hover::after {
 
 a.periodic:hover {
     background-image: linear-gradient(red 0%, red 100%), url(petab-head-360.jpg);
-    padding-bottom: 129px;
+    padding-bottom: 108px;
 }
 
 a.periodic:hover::before {
-    content: "Up-to-date customisable ";
+    content: "Customisable ";
 }
 
 a.geronimo:hover {
     background-image: linear-gradient(red 0%, red 100%), url(geron-head-360.jpg);
-    padding-bottom: 45px;
+    padding-bottom: 87px;
 }
 
 a.geronimo:hover::after {
-    content: " Doctor Who theme cover album";
+    content: " Doctor Who themes";
 }
 
 .gravatar {
