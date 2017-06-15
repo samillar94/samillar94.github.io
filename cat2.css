@@ -61,7 +61,7 @@ div.head {
     
 }
 
-div.head > img {
+img.head {
     width: 100%;
     vertical-align: bottom;
 }
@@ -71,6 +71,13 @@ div.head-text {
     bottom: 8px;
     right: 16px;
     text-align: right;
+}
+
+div.head-text2 {
+    position: absolute;
+    bottom: 8px;
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translateX(-50%);
 }
 
 h1 {
