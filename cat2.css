@@ -92,7 +92,7 @@ h1.black{
     color: #000;
 }
 
-@media only screen and (min-width: 370px){
+@media only screen and (min-width: 555px){
     h1 {
         font-size: 48px;
     }
