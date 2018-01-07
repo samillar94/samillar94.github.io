@@ -4,7 +4,7 @@ html {
 
 @font-face {
     font-family: 'Libel Suit';
-    src: url('libel-suit-rg.TTF');
+    src: url('libel-suit-rg.ttf');
 /*  src: local('Graublau Web Regular'), local('Graublau Web'),
     url("GraublauWeb.woff") format("woff"),
     url("GraublauWeb.otf") format("opentype"),
