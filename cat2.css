@@ -4,7 +4,7 @@ html {
 
 @font-face {
     font-family: 'Libel Suit Regular';
-    src: url('libel-suit-rg.ttf');
+    src: local('libel-suit-rg.ttf');
 /*  src: local('Graublau Web Regular'), local('Graublau Web'),
     url("GraublauWeb.woff") format("woff"),
     url("GraublauWeb.otf") format("opentype"),
@@ -83,7 +83,7 @@ div.head-text2 {
 h1 {
     color: #fff;
     margin-bottom: 5px;
-    font-family: 'libel-suit-rg.ttf', 'Segoe UI', sans-serif;
+    font-family: 'Libel Suit Regular', 'Gill Sans MT Condensed', sans-serif;
     font-size: 30px;
     text-shadow: 0 0 10px white;
 }
