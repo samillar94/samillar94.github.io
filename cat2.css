@@ -357,7 +357,7 @@ a.periodic:hover {
 }
 
 a.periodic:hover::before {
-    content: "Customisable ";
+    content: "UPDATED customisable ";
 }
 
 a.geronimo:hover {
