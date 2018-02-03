@@ -353,7 +353,7 @@ a.checklist:hover::after {
 
 a.periodic:hover {
     background-image: linear-gradient(red 0%, red 100%), url(petab-head-360.jpg);
-    padding-bottom: 108px;
+    padding-bottom: 87px;
 }
 
 a.periodic:hover::before {
