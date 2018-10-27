@@ -24,7 +24,7 @@ body {
     text-align: center;   
 }
 body.showcase {
-    background: black url("thecaterpillar1.5.jpg") repeat fixed center;
+    background: black url("thecaterpillar1.6.jpg") repeat fixed center;
 }
 body.profile {
     background: linear-gradient(to bottom, #001 0%, #002 90%);
