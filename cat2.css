@@ -3,8 +3,8 @@ html {
 }
 
 @font-face {
-    font-family: 'Gill Sans MT Condensed';
-    src: url('GILC____.TTF');
+    font-family: 'Libel Suit Regular';
+    src: local('libel-suit-rg.ttf');
 /*  src: local('Graublau Web Regular'), local('Graublau Web'),
     url("GraublauWeb.woff") format("woff"),
     url("GraublauWeb.otf") format("opentype"),
@@ -24,7 +24,7 @@ body {
     text-align: center;   
 }
 body.showcase {
-    background: black url("thecaterpillar1.5.jpg") repeat fixed center;
+    background: black url("thecaterpillar1.6.jpg") repeat fixed center;
 }
 body.profile {
     background: linear-gradient(to bottom, #001 0%, #002 90%);
@@ -61,7 +61,7 @@ div.head {
     
 }
 
-div.head > img {
+img.head {
     width: 100%;
     vertical-align: bottom;
 }
@@ -73,10 +73,17 @@ div.head-text {
     text-align: right;
 }
 
+div.head-text2 {
+    position: absolute;
+    bottom: 8px;
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translateX(-50%);
+}
+
 h1 {
     color: #fff;
     margin-bottom: 5px;
-    font-family: 'Gill Sans MT Condensed', 'Segoe UI', sans-serif;
+    font-family: 'Libel Suit Regular', 'Gill Sans MT Condensed', sans-serif;
     font-size: 30px;
     text-shadow: 0 0 10px white;
 }
@@ -85,7 +92,7 @@ h1.black{
     color: #000;
 }
 
-@media only screen and (min-width: 370px){
+@media only screen and (min-width: 555px){
     h1 {
         font-size: 48px;
     }
@@ -346,11 +353,11 @@ a.checklist:hover::after {
 
 a.periodic:hover {
     background-image: linear-gradient(red 0%, red 100%), url(petab-head-360.jpg);
-    padding-bottom: 108px;
+    padding-bottom: 87px;
 }
 
 a.periodic:hover::before {
-    content: "Customisable ";
+    content: "UPDATED customisable ";
 }
 
 a.geronimo:hover {
@@ -479,7 +486,7 @@ nav > ul > li.this > a{
 }
 
 
-@media only screen and (min-width:385px) {
+@media only screen and (min-width:425px) {
     nav {
         height: 37px;
     }
